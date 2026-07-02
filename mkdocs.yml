@@ -1,0 +1,28 @@
+site_name: TPC2 ESR Training Hub
+site_description: ESR P/CP Training Guide for TPC2
+site_author: OAIC ESR Team
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Quick Guide:
+      - English: quick-guide-en.md
+      - 中文: quick-guide-zh.md
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
