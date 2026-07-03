@@ -1,5 +1,5 @@
-site_name: TPC2 ESR Training Hub
-site_description: ESR P/CP Training Guide for TPC2
+site_name: OAIC ESR AutoDoc Hub
+site_description: OAIC ESR automation guides for training, DPR, 3DLA, MoM and project documentation.
 site_author: OAIC ESR Team
 
 theme:
@@ -16,8 +16,18 @@ theme:
 nav:
   - Home: index.md
   - Quick Guide:
-      - English: quick-guide-en.md
-      - 中文: quick-guide-zh.md
+      - 3DLA Overview:
+          - English: 3DLA-Overview-AUTO-Quick-Guide-EN.md
+          - 中文: 3DLA-Overview-AUTO-Quick-Guide-ZH.md
+      - 3DLA MOM:
+          - English: 3DLA-MOM-AUTO-Quick-Guide-EN.md
+          - 中文: 3DLA-MOM-AUTO-Quick-Guide-ZH.md
+      - DPR:
+          - English: DPR-AUTO-Quick-Guide-EN.md
+          - 中文: DPR-AUTO-Quick-Guide-ZH.md
+      - ESR Training:
+          - English: ESR-Training-AUTO-Quick-Guide-EN.md
+          - 中文: ESR-Training-AUTO-Quick-Guide-ZH.md
 
 markdown_extensions:
   - admonition
