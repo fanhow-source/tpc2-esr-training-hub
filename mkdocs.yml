@@ -5,6 +5,8 @@ site_author: OAIC ESR Team
 theme:
   name: material
   language: en
+  logo: assets/oaic-logo.png
+  favicon: assets/oaic-logo.png
   features:
     - navigation.tabs
     - navigation.sections
