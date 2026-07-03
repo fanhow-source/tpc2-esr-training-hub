@@ -1,5 +1,5 @@
 site_name: OAIC ESR AutoDoc Hub
-site_description: OAIC ESR automation guides for training, DPR, 3DLA, MoM and project documentation.
+site_description: OAIC ESR automation guides for Training, DPR, 3DLA, MoM and project documentation.
 site_author: OAIC ESR Team
 
 theme:
@@ -7,6 +7,10 @@ theme:
   language: en
   logo: assets/oaic-logo.png
   favicon: assets/oaic-logo.png
+  palette:
+    scheme: default
+    primary: custom
+    accent: custom
   features:
     - navigation.tabs
     - navigation.sections
@@ -14,6 +18,9 @@ theme:
     - search.highlight
     - search.suggest
     - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md
@@ -33,6 +40,8 @@ nav:
 markdown_extensions:
   - admonition
   - tables
+  - attr_list
+  - md_in_html
   - toc:
       permalink: true
   - pymdownx.details
