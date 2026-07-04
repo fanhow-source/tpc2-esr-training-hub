@@ -561,3 +561,58 @@ body {
     grid-template-columns: 32px 1fr;
   }
 }
+
+/* OAIC portal v0.3 - operational info sections */
+
+.oaic-section {
+  margin-top: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.oaic-two-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+.oaic-info-panel {
+  border: 1px solid rgba(8, 47, 63, 0.12);
+  border-radius: 16px;
+  padding: 1.4rem 1.6rem;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(8, 47, 63, 0.08);
+}
+
+.oaic-section-label {
+  margin-bottom: 0.35rem;
+  color: #f36f21;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.oaic-info-panel h2 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  color: #082f3f;
+}
+
+.oaic-check-list,
+.oaic-update-list {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+.oaic-check-list li,
+.oaic-update-list li {
+  margin-bottom: 0.55rem;
+}
+
+.oaic-footer {
+  margin-top: 2.6rem;
+  padding: 1.2rem 1.4rem;
+  border-top: 1px solid rgba(8, 47, 63, 0.12);
+  color: #49636f;
+  font-size: 0.9rem;
+}
