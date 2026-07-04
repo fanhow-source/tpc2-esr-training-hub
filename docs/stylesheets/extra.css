@@ -637,6 +637,7 @@ body {
     0 3px 18px rgba(0, 0, 0, 0.18);
 }
 
+
 /* Hero action buttons - 4 buttons layout */
 .oaic-hero__actions {
   display: flex;
@@ -700,4 +701,16 @@ body {
   color: #0a2c3d; /* OAIC dark blue */
   font-size: 1rem;
   font-weight: 800;
+}
+
+/* Practical band title - forced two-line layout */
+.md-typeset .oaic-section--band h2.oaic-band-title {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0 !important;
+  white-space: normal !important;
+}
+
+.md-typeset .oaic-section--band h2.oaic-band-title .oaic-band-title__line {
+  display: block !important;
 }

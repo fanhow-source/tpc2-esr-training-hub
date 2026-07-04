@@ -30,12 +30,6 @@ body {
   box-shadow: 0 2px 14px rgba(10, 44, 61, 0.12);
 }
 
-.md-header__title {
-  color: var(--oaic-primary);
-  font-weight: 700;
-  letter-spacing: 0;
-}
-
 .md-header__button {
   color: var(--oaic-primary);
 }
@@ -560,4 +554,163 @@ body {
   .oaic-checklist div {
     grid-template-columns: 32px 1fr;
   }
+}
+
+/* OAIC portal v0.3 - operational info sections */
+
+.oaic-section {
+  margin-top: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.oaic-two-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+.oaic-info-panel {
+  border: 1px solid rgba(8, 47, 63, 0.12);
+  border-radius: 16px;
+  padding: 1.4rem 1.6rem;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(8, 47, 63, 0.08);
+}
+
+.oaic-section-label {
+  margin-bottom: 0.35rem;
+  color: #f36f21;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.oaic-info-panel h2 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  color: #082f3f;
+}
+
+.oaic-check-list,
+.oaic-update-list {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+.oaic-check-list li,
+.oaic-update-list li {
+  margin-bottom: 0.55rem;
+}
+
+.oaic-footer {
+  box-sizing: border-box;
+  width: min(1180px, calc(100vw - 2rem));
+  margin: 1.6rem auto 1.2rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(8, 47, 63, 0.12);
+  color: #6a7d86;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.oaic-footer strong {
+  color: #49636f;
+  font-size: 0.68rem;
+}
+
+/* Hero title colour split */
+.md-typeset .oaic-hero-title {
+  color: inherit;
+}
+
+.oaic-title-light {
+  color: #6fa8dc;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.28);
+}
+
+.oaic-title-dark {
+  color: #0a2c3d;
+  text-shadow:
+    0 2px 10px rgba(255, 255, 255, 0.65),
+    0 3px 18px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Hero action buttons - 4 buttons layout */
+.oaic-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.oaic-hero__actions .oaic-button {
+  min-width: 135px;
+}
+
+/* Hero title colour split - force override */
+.md-typeset .oaic-hero h1.oaic-hero-title {
+  color: unset !important;
+}
+
+.md-typeset .oaic-hero h1.oaic-hero-title .oaic-title-light {
+  color: #6fa8dc !important; /* OAIC light blue */
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.32);
+}
+
+.md-typeset .oaic-hero h1.oaic-hero-title .oaic-title-dark {
+  color: #ffffff !important;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Hero buttons - transparent by default, OAIC orange on hover */
+.oaic-hero__actions .oaic-button,
+.oaic-hero__actions .oaic-button--primary,
+.oaic-hero__actions .oaic-button--ghost {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.52) !important;
+  color: #ffffff !important;
+  min-width: 135px;
+}
+
+.oaic-hero__actions .oaic-button:hover,
+.oaic-hero__actions .oaic-button--primary:hover,
+.oaic-hero__actions .oaic-button--ghost:hover {
+  background: #f26419 !important;
+  border-color: #f26419 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(242, 100, 25, 0.28);
+}
+
+/* Header site title split colour */
+.md-header__title .md-header__ellipsis {
+  display: none !important;
+}
+
+.md-header__title::before {
+  content: "OAIC";
+  color: #6fa8dc; /* OAIC light blue */
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.md-header__title::after {
+  content: " ESR AutoDoc Hub";
+  color: #0a2c3d; /* OAIC dark blue */
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+/* Practical band title - forced two-line layout */
+.md-typeset .oaic-section--band h2.oaic-band-title {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0 !important;
+  white-space: normal !important;
+}
+
+.md-typeset .oaic-section--band h2.oaic-band-title .oaic-band-title__line {
+  display: block !important;
 }

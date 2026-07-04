@@ -51,8 +51,8 @@
       <h3>ESR Training</h3>
       <p>How to prepare candidate lists, run the training tool and create certificates.</p>
       <div class="oaic-guide-card__links">
-        <a href="ESR-Training-AUTO-Quick-Guide-ZH/">中文指南</a>
         <a href="ESR-Training-AUTO-Quick-Guide-EN/">English Guide</a>
+        <a href="ESR-Training-AUTO-Quick-Guide-ZH/">中文指南</a>
       </div>
     </article>
 
@@ -61,8 +61,8 @@
       <h3>DPR</h3>
       <p>How to generate tomorrow's DPR, update dates, reset photos and check the output.</p>
       <div class="oaic-guide-card__links">
-        <a href="DPR-AUTO-Quick-Guide-ZH/">中文指南</a>
         <a href="DPR-AUTO-Quick-Guide-EN/">English Guide</a>
+        <a href="DPR-AUTO-Quick-Guide-ZH/">中文指南</a>
       </div>
     </article>
 
@@ -71,8 +71,8 @@
       <h3>3DLA Overview</h3>
       <p>How to prepare the 3-day look ahead overview for planned activities.</p>
       <div class="oaic-guide-card__links">
-        <a href="3DLA-Overview-AUTO-Quick-Guide-ZH/">中文指南</a>
         <a href="3DLA-Overview-AUTO-Quick-Guide-EN/">English Guide</a>
+        <a href="3DLA-Overview-AUTO-Quick-Guide-ZH/">中文指南</a>
       </div>
     </article>
 
@@ -81,8 +81,8 @@
       <h3>3DLA MoM</h3>
       <p>How to use the MoM workflow for meeting records and action tracking.</p>
       <div class="oaic-guide-card__links">
-        <a href="3DLA-MOM-AUTO-Quick-Guide-ZH/">中文指南</a>
         <a href="3DLA-MOM-AUTO-Quick-Guide-EN/">English Guide</a>
+        <a href="3DLA-MOM-AUTO-Quick-Guide-ZH/">中文指南</a>
       </div>
     </article>
   </div>
@@ -91,13 +91,19 @@
 <section class="oaic-section oaic-section--band">
   <div class="oaic-band__copy">
     <p class="oaic-section__eyebrow">Practical and controlled</p>
-    <h2>Beautiful enough to trust, simple enough to use every day</h2>
+
+    <h2 class="oaic-band-title">
+      <span class="oaic-band-title__line">Beautiful enough to trust,</span>
+      <span class="oaic-band-title__line">simple enough to use every day</span>
+    </h2>
+
     <p>
       The page is designed as an internal front desk for automation guides. It
       keeps the focus on repeatable steps, folder discipline and final checks,
       while still carrying the OAIC high-voltage offshore identity.
     </p>
   </div>
+
   <div class="oaic-checklist">
     <div>
       <strong>1</strong>
