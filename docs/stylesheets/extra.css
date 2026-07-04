@@ -610,9 +610,18 @@ body {
 }
 
 .oaic-footer {
-  margin-top: 2.6rem;
-  padding: 1.2rem 1.4rem;
+  box-sizing: border-box;
+  width: min(1180px, calc(100vw - 2rem));
+  margin: 1.6rem auto 1.2rem;
+  padding: 0.75rem 0;
   border-top: 1px solid rgba(8, 47, 63, 0.12);
+  color: #6a7d86;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  text-align: left;
+}
+
+.oaic-footer strong {
   color: #49636f;
-  font-size: 0.9rem;
+  font-size: 0.68rem;
 }
