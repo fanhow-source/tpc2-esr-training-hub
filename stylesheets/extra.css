@@ -297,6 +297,85 @@ body {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.oaic-report-flow {
+  align-items: center;
+  background: linear-gradient(135deg, rgba(10, 44, 61, 0.06), rgba(217, 238, 240, 0.48));
+  border: 1px solid rgba(10, 44, 61, 0.1);
+  border-radius: 8px;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 220px 1fr;
+  margin-bottom: 1.1rem;
+  padding: 0.9rem 1rem;
+}
+
+.oaic-report-flow__intro span {
+  color: var(--oaic-accent);
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.oaic-report-flow__intro strong {
+  color: var(--oaic-primary);
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.25;
+  margin-top: 0.2rem;
+}
+
+.oaic-report-flow ol {
+  display: grid;
+  gap: 0.55rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.oaic-report-flow li {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(10, 44, 61, 0.1);
+  border-radius: 7px;
+  color: var(--oaic-primary);
+  display: flex;
+  font-size: 0.75rem;
+  font-weight: 800;
+  gap: 0.5rem;
+  min-height: 42px;
+  padding: 0.45rem 0.55rem;
+}
+
+.oaic-report-flow li span,
+.oaic-step-badge {
+  align-items: center;
+  background: var(--oaic-accent);
+  border-radius: 5px;
+  color: var(--oaic-white);
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 0.66rem;
+  font-weight: 900;
+  justify-content: center;
+  line-height: 1;
+}
+
+.oaic-report-flow li span {
+  height: 26px;
+  width: 26px;
+}
+
+.oaic-step-badge {
+  min-height: 28px;
+  padding: 0.35rem 0.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.9rem;
+}
+
 .oaic-guide-card {
   background: var(--oaic-white);
   border: 1px solid var(--oaic-line);
@@ -460,6 +539,14 @@ body {
 }
 
 @media screen and (max-width: 1100px) {
+  .oaic-report-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .oaic-report-flow ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .oaic-guide-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -541,6 +628,16 @@ body {
 
   .oaic-guide-grid {
     grid-template-columns: 1fr;
+  }
+
+  .oaic-report-flow ol {
+    grid-template-columns: 1fr;
+  }
+
+  .oaic-step-badge {
+    position: static;
+    width: max-content;
+    margin: 0.2rem 0 0.55rem;
   }
 
   .oaic-guide-card {
