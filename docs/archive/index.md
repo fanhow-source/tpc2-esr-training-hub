@@ -39,21 +39,6 @@
   </p>
 </section>
 
-<section class="oaic-section oaic-section--intro">
-  <p class="oaic-section__eyebrow">Prerequisite / Step 0</p>
-  <h2>Sync SharePoint folders before running automation</h2>
-  <p>
-    Start here if this is your first time using the automation tools, or if
-    OneDrive has been reinstalled. Sync the required SharePoint folders first,
-    then open the latest automation files once so they are downloaded locally
-    before running MoM, Overview, DPR or Training Hub workflows
-  </p>
-  <div class="oaic-guide-card__links">
-    <a href="Step-0-SharePoint-OneDrive-Setup-EN/">English Guide</a>
-    <a href="Step-0-SharePoint-OneDrive-Setup-ZH/">中文指南</a>
-  </div>
-</section>
-
 <section class="oaic-section">
   <div class="oaic-section__heading">
     <p class="oaic-section__eyebrow">Quick guides</p>
@@ -66,7 +51,6 @@
       <strong>Daily reporting sequence</strong>
     </div>
     <ol>
-      <li><span>0</span>Step 0 Setup</li>
       <li><span>1</span>3DLA Overview</li>
       <li><span>2</span>3DLA MoM</li>
       <li><span>3</span>DPR</li>
@@ -75,21 +59,6 @@
   </div>
 
   <div class="oaic-guide-grid">
-    <article class="oaic-guide-card oaic-guide-card--setup oaic-guide-card--wide">
-      <div class="oaic-step-badge">Step 0</div>
-      <p class="oaic-guide-card__label">Prerequisite</p>
-      <h3>SharePoint / OneDrive Setup</h3>
-      <p>
-        Start here before running any automation tool. Sync the required SharePoint folders,
-        confirm the local OneDrive path, and open the latest automation files once so they
-        are downloaded to your computer.
-      </p>
-      <div class="oaic-guide-card__links">
-        <a href="Step-0-SharePoint-OneDrive-Setup-EN/">English Guide</a>
-        <a href="Step-0-SharePoint-OneDrive-Setup-ZH/">中文指南</a>
-      </div>
-    </article>
-
     <article class="oaic-guide-card oaic-guide-card--overview">
       <div class="oaic-step-badge">Step 1</div>
       <p class="oaic-guide-card__label">Look ahead</p>
@@ -135,6 +104,7 @@
     </article>
   </div>
 </section>
+
 <section class="oaic-section oaic-section--band">
   <div class="oaic-band__copy">
     <p class="oaic-section__eyebrow">Practical and controlled</p>
@@ -176,6 +146,6 @@
 
 <div class="oaic-footer">
   <strong>OAIC Power System Solutions</strong><br>
-  Internal Documentation Portal · Version v0.4<br>
-  Maintained by Charlie Tseng · Last updated: 2026-07-07
+  Internal Documentation Portal · Version v0.3<br>
+  Maintained by Charlie Tseng · Last updated: 2026-07-06
 </div>

@@ -23,19 +23,25 @@ extra_css:
   - stylesheets/extra.css
 
 nav:
+  - Step 0 Setup:
+      - English: Step-0-SharePoint-OneDrive-Setup-EN.md
+      - 中文: Step-0-SharePoint-OneDrive-Setup-ZH.md
   - Home: index.md
-  - ESR Training:
-      - English: ESR-Training-AUTO-Quick-Guide-EN.md
-      - 中文: ESR-Training-AUTO-Quick-Guide-ZH.md
-  - DPR:
-      - English: DPR-AUTO-Quick-Guide-EN.md
-      - 中文: DPR-AUTO-Quick-Guide-ZH.md
   - 3DLA Overview:
       - English: 3DLA-Overview-AUTO-Quick-Guide-EN.md
       - 中文: 3DLA-Overview-AUTO-Quick-Guide-ZH.md
   - 3DLA MoM:
       - English: 3DLA-MOM-AUTO-Quick-Guide-EN.md
       - 中文: 3DLA-MOM-AUTO-Quick-Guide-ZH.md
+  - DPR:
+      - English: DPR-AUTO-Quick-Guide-EN.md
+      - 中文: DPR-AUTO-Quick-Guide-ZH.md
+  - ESR Training:
+      - English: ESR-Training-AUTO-Quick-Guide-EN.md
+      - 中文: ESR-Training-AUTO-Quick-Guide-ZH.md
+
+
+
 
 markdown_extensions:
   - admonition
