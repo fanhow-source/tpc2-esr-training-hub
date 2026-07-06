@@ -809,6 +809,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#please-check-which-folder-you-are-using" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Please Check Which Folder You Are Using
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#before-you-start" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -842,10 +853,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#if-the-file-already-exists" class="md-nav__link">
+  <a href="#if-the-same-date-mom-already-exists" class="md-nav__link">
     <span class="md-ellipsis">
       
-        If The File Already Exists
+        If The Same Date MoM Already Exists
       
     </span>
   </a>
@@ -945,6 +956,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#please-check-which-folder-you-are-using" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Please Check Which Folder You Are Using
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#before-you-start" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -978,10 +1000,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#if-the-file-already-exists" class="md-nav__link">
+  <a href="#if-the-same-date-mom-already-exists" class="md-nav__link">
     <span class="md-ellipsis">
       
-        If The File Already Exists
+        If The Same Date MoM Already Exists
       
     </span>
   </a>
@@ -1028,21 +1050,46 @@
 
 
 <h1 id="3dla-mom-automation-quick-guide">3DLA MoM Automation - Quick Guide<a class="headerlink" href="#3dla-mom-automation-quick-guide" title="Permanent link">&para;</a></h1>
-<p>Hi everyone, to make the daily ESR 3DLA MoM preparation a little easier, this folder now includes an automated Word report generator.</p>
-<p>The aim is not to replace anyone's review. It simply takes care of the repetitive parts first, so we can spend more time checking the content, risks, and interfaces properly.</p>
+<p>Hi everyone, this quick guide is for colleagues who generate the daily ESR 3DLA MoM.</p>
+<p>The automation creates the next day's MoM Word file and inserts the matching 3DLA Overview Excel into Attachment A. The goal is to reduce repeated formatting work, so we can spend more time checking the actual content, ESR status, SIMOPS, and interfaces.</p>
+<h2 id="please-check-which-folder-you-are-using">Please Check Which Folder You Are Using<a class="headerlink" href="#please-check-which-folder-you-are-using" title="Permanent link">&para;</a></h2>
+<p>There are currently two folder sets in use. Please use the one that matches your OneDrive setup.</p>
+<table>
+<thead>
+<tr>
+<th>User / setup</th>
+<th>MoM folder</th>
+<th>Overview folder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Charlie new OneDrive path</td>
+<td><code>C:\Users\CharlieTseng\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM</code></td>
+<td><code>C:\Users\CharlieTseng\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview</code></td>
+</tr>
+<tr>
+<td>Colleagues using the original path</td>
+<td><code>C:\Users\CharlieTseng\OAIC Ltd\PROJECT TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM</code></td>
+<td><code>C:\Users\CharlieTseng\OAIC Ltd\PROJECT TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview</code></td>
+</tr>
+</tbody>
+</table>
+<p>Small reminder: run the <code>.cmd</code> from the MoM folder you are actually using. The script will first look for <code>..\Overview</code> next to that MoM folder, so it does not accidentally use the Excel files from the other OneDrive path.</p>
 <h2 id="before-you-start">Before You Start<a class="headerlink" href="#before-you-start" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Please complete the target day's <code>3DLA Overview</code> Excel first.</li>
-<li>The Overview Excel should be saved in:
-  <code>..\Overview</code></li>
-<li>Please close Word before running the tool, so the Word file is not locked.</li>
-<li>If the Overview Excel is still open, please save it first.</li>
+<li>Complete and save the target day's <code>3DLA Overview</code> Excel.</li>
+<li>The Overview Excel file name should look like:
+  <code>OWP2-ESR-3DLA-Overview-20260706.xlsx</code></li>
+<li>Close Word first, so the Word file is not locked.</li>
+<li>If the Overview Excel is open, please save it before running the tool.</li>
 </ul>
 <h2 id="daily-use">Daily Use<a class="headerlink" href="#daily-use" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Complete and save tomorrow's Overview Excel.</li>
 <li>Close all Word windows.</li>
-<li>In the MoM folder, double-click:
+<li>Go to the MoM folder you are using.</li>
+<li>Double-click:
    <code>Close Word First - Generate Tomorrow 3DLA MoM.cmd</code></li>
 <li>The tool will generate tomorrow's MoM Word file automatically.</li>
 <li>After opening the new Word file, please quickly check:</li>
@@ -1050,18 +1097,17 @@
 <li>Meeting no.</li>
 <li><code>5. Attachments - A. 3DLA Overview</code></li>
 <li><code>B. HV System Overview</code></li>
-<li>Once checked, continue with any meeting notes or PDF export as usual.</li>
+<li>After checking, continue with meeting notes or PDF export as usual.</li>
 </ol>
 <h2 id="what-the-automation-does">What The Automation Does<a class="headerlink" href="#what-the-automation-does" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Finds the most suitable previous MoM Word file to use as the template.</li>
+<li>Finds a suitable previous MoM Word file to use as the template.</li>
 <li>Creates the new Word file using the correct date-based name, for example:
-  <code>OWP2-ESR-3DLA-MOM-260704-01.docx</code></li>
+  <code>OWP2-ESR-3DLA-MOM-260706-01.docx</code></li>
 <li>Updates the Word header fields:</li>
 <li>Date</li>
 <li>Meeting no.</li>
-<li>Finds the matching Overview Excel for the target date, for example:
-  <code>OWP2-ESR-3DLA-Overview-20260704.xlsx</code></li>
+<li>Finds the matching Overview Excel for the target date.</li>
 <li>Captures the 3DLA Overview from the Excel <code>EN</code> worksheet.</li>
 <li>Uses only the range that contains visible text or values, so empty rows below the table are not pasted into Word.</li>
 <li>Converts the Overview into an image and inserts it into:
@@ -1070,10 +1116,10 @@
 <li>Keeps the original Word layout, tables, and other attachment content.</li>
 <li>Does not overwrite an existing file by default, to avoid replacing a version already edited by someone.</li>
 </ul>
-<h2 id="if-the-file-already-exists">If The File Already Exists<a class="headerlink" href="#if-the-file-already-exists" title="Permanent link">&para;</a></h2>
-<p>If a MoM Word file already exists for the same date, the tool will stop and warn you. It will not overwrite it automatically.</p>
+<h2 id="if-the-same-date-mom-already-exists">If The Same Date MoM Already Exists<a class="headerlink" href="#if-the-same-date-mom-already-exists" title="Permanent link">&para;</a></h2>
+<p>The tool will stop by default. It will not overwrite the file automatically.</p>
 <p>If you are sure you want to regenerate it, run this in PowerShell:</p>
-<div class="highlight"><pre><span></span><code><span class="n">powershell</span> <span class="n">-Sta</span> <span class="n">-NoProfile</span> <span class="n">-ExecutionPolicy</span> <span class="n">Bypass</span> <span class="o">-File</span> <span class="s2">&quot;C:\Users\CharlieTseng\OAIC Ltd\PROJECT TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM\Generate Tomorrow 3DLA MoM - Code.ps1&quot;</span> <span class="n">-TargetDate</span> <span class="s2">&quot;2026-07-04&quot;</span> <span class="n">-Overwrite</span> <span class="n">-Open</span>
+<div class="highlight"><pre><span></span><code><span class="n">powershell</span> <span class="n">-Sta</span> <span class="n">-NoProfile</span> <span class="n">-ExecutionPolicy</span> <span class="n">Bypass</span> <span class="o">-File</span> <span class="s2">&quot;Generate Tomorrow 3DLA MoM - Code.ps1&quot;</span> <span class="n">-TargetDate</span> <span class="s2">&quot;2026-07-06&quot;</span> <span class="n">-Overwrite</span> <span class="n">-Open</span>
 </code></pre></div>
 <p>Please change the date to the report date you need.</p>
 <h2 id="common-situations">Common Situations<a class="headerlink" href="#common-situations" title="Permanent link">&para;</a></h2>
@@ -1091,26 +1137,26 @@
 </tr>
 <tr>
 <td>The Overview Excel cannot be found</td>
-<td>Check that the target date Excel exists in <code>..\Overview</code></td>
+<td>Check that the correct <code>..\Overview</code> folder exists next to your MoM folder</td>
 </tr>
 <tr>
 <td>Attachment A does not look right</td>
-<td>Check the Overview Excel content and row heights, then regenerate the MoM</td>
+<td>Check the Overview Excel content, row heights, and print layout, then regenerate</td>
 </tr>
 <tr>
 <td>The same date MoM already exists</td>
 <td>Use <code>-Overwrite</code> only if you are sure you want to rebuild it</td>
 </tr>
 <tr>
-<td>The Word still needs edits</td>
+<td>The Word still needs manual edits</td>
 <td>That is normal. The tool prepares the draft; final review is still manual</td>
 </tr>
 </tbody>
 </table>
 <h2 id="gentle-reminders">Gentle Reminders<a class="headerlink" href="#gentle-reminders" title="Permanent link">&para;</a></h2>
 <ul>
-<li>This automation prepares the report draft and inserts the Overview. The final content still needs a human check.</li>
-<li>If the Overview has many activities, the image will be scaled to fit the page, but it is still worth opening the Word file for a quick look.</li>
+<li>This tool prepares the draft. It does not replace the final human check.</li>
+<li>If the Overview has many activities, please open the Word file and check that the image is still readable.</li>
 <li>Saving a few minutes on repeated formatting gives us a little more space to focus on ESR, SIMOPS, and interface checks.</li>
 </ul>
 
