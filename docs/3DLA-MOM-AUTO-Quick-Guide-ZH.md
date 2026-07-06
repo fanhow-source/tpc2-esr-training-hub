@@ -1,57 +1,68 @@
 # 3DLA MoM 自動化 - 快速指南
 
-大家好，為了讓每天產生 ESR 3DLA MoM 稍微輕鬆一點，這個資料夾已經加入自動產生 Word 報告的功能。
+大家好，這份 quick guide 是給每天要產生 ESR 3DLA MoM 的同事使用。
 
-它的目的不是取代大家的判斷，而是先把重複、容易漏的小動作做好，讓我們把時間留給真正重要的事：確認內容、風險和介面資訊是否正確。
+這個自動化工具會幫忙產生隔天的 MoM Word，並把對應日期的 3DLA Overview Excel 內容貼到 Attachment A。它主要是幫大家省掉重複操作，讓我們把時間留給真正重要的內容檢查、ESR 狀態、SIMOPS 和 interface 確認。
+
+## 請先確認你使用哪一個資料夾
+
+目前有兩組路徑可以使用。請依照你電腦上的 OneDrive 狀態選擇正確的資料夾。
+
+| 使用者 | MoM 資料夾 | Overview 資料夾 |
+| --- | --- | --- |
+| Charlie 新 OneDrive 路徑 | `C:\Users\CharlieTseng\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM` | `C:\Users\CharlieTseng\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview` |
+| 同事沿用原本路徑 | `C:\Users\CharlieTseng\OAIC Ltd\PROJECT TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM` | `C:\Users\CharlieTseng\OAIC Ltd\PROJECT TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview` |
+
+小提醒：請在你實際使用的 MoM 資料夾裡執行 `.cmd`。程式會優先使用同一組 3DLA 資料夾底下的 `..\Overview`，避免抓到另一個 OneDrive 路徑的 Excel。
 
 ## 使用前請先確認
 
-- 今日或明日的 `3DLA Overview` Excel 已經完成。
-- Overview Excel 放在：
-  `..\Overview`
+- 目標日期的 `3DLA Overview` Excel 已經完成並儲存。
+- Overview Excel 檔名格式應類似：
+  `OWP2-ESR-3DLA-Overview-20260706.xlsx`
 - Word 請先關閉，避免檔案被鎖住。
-- 如果 Excel 正在編輯 Overview，也建議先儲存。
+- 如果 Excel 正在編輯 Overview，請先儲存再執行。
 
 ## 日常使用方式
 
-1. 先完成並儲存明天的 Overview Excel。
+1. 先完成並儲存隔天的 Overview Excel。
 2. 關閉所有 Word 視窗。
-3. 在 MoM 資料夾雙擊：
+3. 到你正在使用的 MoM 資料夾。
+4. 雙擊：
    `Close Word First - Generate Tomorrow 3DLA MoM.cmd`
-4. 程式會自動產生明天的 MoM Word。
-5. 開啟新 Word 後，請快速檢查：
+5. 程式會自動產生隔天的 MoM Word。
+6. 開啟新 Word 後，請快速檢查：
    - Date
    - Meeting no.
    - `5. Attachments - A. 3DLA Overview`
    - `B. HV System Overview`
-6. 確認內容後，再手動補充會議內容或輸出 PDF。
+7. 確認內容後，再手動補充會議紀錄或輸出 PDF。
 
 ## 這個程式會自動做什麼
 
 - 找到合適的前一份 MoM Word 作為模板。
-- 依日期產生新的檔名，例如：
-  `OWP2-ESR-3DLA-MOM-260704-01.docx`
+- 依日期產生新的 Word 檔名，例如：
+  `OWP2-ESR-3DLA-MOM-260706-01.docx`
 - 自動更新 Word 裡的：
   - Date
   - Meeting no.
-- 從 Overview 資料夾找到目標日期的 Excel，例如：
-  `OWP2-ESR-3DLA-Overview-20260704.xlsx`
+- 找到對應日期的 Overview Excel。
 - 從 Excel `EN` 工作表擷取 3DLA Overview。
 - 只擷取有文字或數值的範圍，避免把下方空白一起貼進 Word。
 - 將 Overview 轉成圖片並貼到：
   `5. Attachments - A. 3DLA Overview`
-- 自動裁掉圖片周圍多餘空白，讓它看起來貼齊頁寬、比較好讀。
+- 自動裁掉圖片周圍多餘空白，讓圖片比較貼齊頁寬、比較好閱讀。
 - 保留原本 Word 的版面、表格和其他附件內容。
-- 預設不覆蓋既有檔案，避免不小心蓋掉同事已修改的版本。
+- 預設不覆蓋既有檔案，避免蓋掉同事已修改的版本。
 
-## 如果當天檔案已經存在
+## 如果同一天的 MoM 已經存在
 
-如果已經有同一天的 MoM Word，程式會停止並提醒你，不會直接覆蓋。
+程式預設會停止，不會自動覆蓋。
 
 如果你確定要重新產生，可以用 PowerShell 執行：
 
 ```powershell
-powershell -Sta -NoProfile -ExecutionPolicy Bypass -File "C:\Users\CharlieTseng\OAIC Ltd\PROJECT TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM\Generate Tomorrow 3DLA MoM - Code.ps1" -TargetDate "2026-07-04" -Overwrite -Open
+powershell -Sta -NoProfile -ExecutionPolicy Bypass -File "Generate Tomorrow 3DLA MoM - Code.ps1" -TargetDate "2026-07-06" -Overwrite -Open
 ```
 
 請把日期改成你要重新產生的日期。
@@ -61,14 +72,14 @@ powershell -Sta -NoProfile -ExecutionPolicy Bypass -File "C:\Users\CharlieTseng\
 | 狀況 | 建議處理 |
 | --- | --- |
 | 程式說 Word 還開著 | 關閉所有 Word 視窗後再跑一次 |
-| 找不到 Overview Excel | 先確認 `..\Overview` 裡是否已有目標日期 Excel |
-| Attachment A 圖片看起來不對 | 先確認 Overview Excel 的內容和列高是否正常，再重新產生 |
-| 已經產生過同一天 MoM | 若要重做，請用 `-Overwrite` |
-| Word 開啟後內容還要調整 | 可以正常手動修改，程式只是幫你先做好底稿 |
+| 找不到 Overview Excel | 確認你使用的 MoM 路徑旁邊是否有正確的 `..\Overview` |
+| 貼上的 Overview 圖片看起來不對 | 先確認 Overview Excel 內容、列高和頁面範圍，再重新產生 |
+| 同一天 MoM 已經存在 | 確定要重做才使用 `-Overwrite` |
+| Word 還需要手動調整 | 這是正常的，程式只是先幫你做好底稿 |
 
 ## 小提醒
 
-- 這份自動化主要幫忙做「產生底稿」和「貼 Overview」，最後內容仍需要人工檢查。
-- 如果 Overview Excel 當天工項很多，圖片會自動依頁面空間縮放，但仍建議打開 Word 看一次。
-- 每天多省一點重複操作時間，大家就能多留一點精神給 ESR / SIMOPS / interface 的確認。
+- 這份工具是幫忙產生底稿，不是取代最後檢查。
+- 如果 Overview 當天工項很多，請一定打開 Word 看一次圖片是否清楚。
+- 每天少一點重複操作，就多一點時間留給 ESR / SIMOPS / interface 的確認。
 

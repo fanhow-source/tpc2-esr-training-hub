@@ -42,12 +42,9 @@ if (-not $changes) {
     Write-Host "No source changes to commit." -ForegroundColor Yellow
 } else {
     Write-Host ""
-    $commitMessage = Read-Host "Enter commit message, or press Enter for auto message"
 
-    if ([string]::IsNullOrWhiteSpace($commitMessage)) {
-        $date = Get-Date -Format "yyyy-MM-dd HH:mm"
-        $commitMessage = "Update ESR AutoDoc Hub - $date"
-    }
+$date = Get-Date -Format "yyyy-MM-dd HH:mm"
+$commitMessage = "Update ESR AutoDoc Hub - $date"
 
     Write-Host ""
     Write-Host "Committing source files..." -ForegroundColor Cyan
