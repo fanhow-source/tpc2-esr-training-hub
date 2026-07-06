@@ -1,0 +1,11 @@
+之後你的完整流程就是：
+
+python -m mkdocs serve
+
+本地確認 OK 後 Ctrl + C
+
+再用powershell跑：
+
+.\deploy.ps1
+
+這樣就會自動 build、commit、push、deploy，最後開啟 GitHub Pages。
