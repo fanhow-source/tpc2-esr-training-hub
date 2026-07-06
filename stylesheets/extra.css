@@ -414,6 +414,16 @@ body {
   background: #b35c1e;
 }
 
+/* Step 0 setup card */
+.oaic-guide-card--setup::before {
+  background: var(--oaic-accent);
+}
+
+.oaic-guide-card--wide {
+  grid-column: 1 / -1;
+  min-height: 0;
+}
+
 .oaic-guide-card:hover {
   border-color: rgba(242, 100, 25, 0.36);
   box-shadow: 0 18px 36px rgba(10, 44, 61, 0.13);
