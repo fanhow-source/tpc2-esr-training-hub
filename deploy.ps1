@@ -64,10 +64,11 @@ Write-Host ""
 Write-Host "Deployment completed." -ForegroundColor Green
 Write-Host "Opening GitHub Pages with cache bypass..." -ForegroundColor Cyan
 
-Start-Process "$siteUrl?v=$timestamp"
+$finalUrl = "$($siteUrl)?v=$timestamp"
+Start-Process $finalUrl
 
 Write-Host ""
 Write-Host "Website:" -ForegroundColor Cyan
-Write-Host "$siteUrl?v=$timestamp"
+Write-Host $finalUrl
 Write-Host ""
 Write-Host "==================================================" -ForegroundColor Cyan

@@ -1,5 +1,6 @@
 之後你的完整流程就是：
 
+cd C:\Users\CharlieTseng\Desktop\tpc2-esr-training-hub
 python -m mkdocs serve
 
 本地確認 OK 後 Ctrl + C
