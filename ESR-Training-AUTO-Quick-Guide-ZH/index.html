@@ -973,7 +973,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        操作流程
+        使用前準備
       
     </span>
   </a>
@@ -984,7 +984,29 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
+        建議操作順序
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         已自動化的部分
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        小提醒
       
     </span>
   </a>
@@ -1037,7 +1059,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        操作流程
+        使用前準備
       
     </span>
   </a>
@@ -1048,7 +1070,29 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
+        建議操作順序
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
         已自動化的部分
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        小提醒
       
     </span>
   </a>
@@ -1073,12 +1117,12 @@
 
 
 <h1 id="esr-pcp-training-">ESR P/CP Training 自動化流程 - 快速使用說明<a class="headerlink" href="#esr-pcp-training-" title="Permanent link">&para;</a></h1>
-<p>目前 ESR P/CP Training 流程已完成約 80% 自動化，日常作業已可使用。</p>
+<p>目前 ESR P/CP Training 流程已完成約 <strong>95% 自動化</strong>，日常作業已可使用。後續如果發現少量 bug，會再逐步修正。</p>
 <p>相關 email 範本放在：</p>
 <div class="highlight"><pre><span></span><code>\OAIC Ltd\PROJECT TWSHXESR - Documents\General\Training Hub\Training Templates
 </code></pre></div>
-<p>使用前請記得先編輯範本最下方的簽名檔，改成你自己的名字。</p>
-<h2 id="_1">操作流程<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>使用前請先編輯範本最下方的簽名檔，改成你自己的名字。</p>
+<h2 id="_1">使用前準備<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ol>
 <li>當需要請廠商提供 Person / Competent Person 訓練名單時，使用 <code>Person _ CP Candidate Request.oft</code> 範本寄信。</li>
 <li>廠商回填後，請把檔案放到：</li>
@@ -1086,7 +1130,7 @@
 <div class="highlight"><pre><span></span><code>\OAIC Ltd\PROJECT TWSHXESR - Documents\General\Training Hub\01_P_CP Candidate Lists
 </code></pre></div>
 <ol>
-<li>到以下資料夾：</li>
+<li>到以下資料夾啟動工具：</li>
 </ol>
 <div class="highlight"><pre><span></span><code>\OAIC Ltd\PROJECT TWSHXESR - Documents\General\Safety Document - SFD Register
 </code></pre></div>
@@ -1096,22 +1140,75 @@
 <div class="highlight"><pre><span></span><code>Run ESR Training Automation (English).cmd
 Run ESR Training Automation (中文).cmd
 </code></pre></div>
+<h2 id="_2">建議操作順序<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
-<li>依照工具畫面中的步驟 <code>1</code> 到 <code>4</code> 執行。第 <code>5</code> 步目前仍在測試中。</li>
-<li>ESR 證書會自動產生並存放在：</li>
+<li><code>匯入廠商 P/CP 候選名單</code></li>
+<li>將廠商回填的候選名單匯入 <code>TWSHXHV_ESR_OverallRegister</code>。</li>
+<li>
+<p>匯入後，候選名單會移到 <code>Archive</code>。</p>
+</li>
+<li>
+<p><code>將白底待處理人員加入 SharePoint Site access</code></p>
+</li>
+<li>工具會自動開啟 Training Hub，將白底待處理人員加入 Site access。</li>
+<li>
+<p>執行期間請暫時不要操作滑鼠或鍵盤，避免中斷自動化。</p>
+</li>
+<li>
+<p><code>自動寄送 Training invitation email</code></p>
+</li>
+<li>工具會依 Person / CP 分別開啟對應 email 範本。</li>
+<li>Person 名單會放入 BCC 後直接寄出。</li>
+<li>CP 名單會放入 BCC 後直接寄出。</li>
+<li>
+<p>執行前請先確認白底名單正確，因為此步驟會真的寄出 email。</p>
+</li>
+<li>
+<p><code>掃描白底待處理人員</code></p>
+</li>
+<li>
+<p>顯示目前仍待處理的白底人員。</p>
+</li>
+<li>
+<p><code>查 Training Hub 成績狀態</code></p>
+</li>
+<li>自動搜尋 Training Hub 成績檔。</li>
+<li>Person 通過標準：<code>&gt;= 36</code> 分。</li>
+<li>CP 通過標準：Module 1 與 Module 2 都需 <code>&gt;= 20</code> 分。</li>
+<li>只會採用最近約 6 個月內的 <code>Completion time</code> 作為有效成績。</li>
+<li>如果系統只找到半年前以前的同名紀錄，會顯示為舊紀錄參考，不會判定為 <code>PASSED</code>。</li>
+<li>
+<p>若半年內已通過，畫面會顯示已於哪一天 <code>PASSED</code>。</p>
+</li>
+<li>
+<p><code>自動產生 PASSED 人員 PDF 證書</code></p>
+</li>
+<li>只會對半年內有效 <code>PASSED</code> 的人員，自動產生不可編輯的 PDF 證書。</li>
+<li>證書會存放在：</li>
 </ol>
 <div class="highlight"><pre><span></span><code>\OAIC Ltd\PROJECT TWSHXESR - Documents\General\Certificates - CRT\2. Ready to be uploaded
 </code></pre></div>
 <ol>
-<li>使用 <code>Person Training - Certificate</code> 或 <code>CP Training - Certificate</code> email 範本，把產生好的證書加入附件後，寄給已通過測驗的人員。</li>
+<li><code>準備 Outlook certificate email 附件</code></li>
+<li>使用 <code>Person Training - Certificate</code> 或 <code>CP Training - Certificate</code> 範本。</li>
+<li>將產生好的 PDF 證書寄給已通過測驗的人員。</li>
 </ol>
-<h2 id="_2">已自動化的部分<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_3">已自動化的部分<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>不需要手動 key-in 人員資料。</li>
-<li>不需要手動檢查是否通過，結果會直接顯示在畫面上。</li>
+<li>不需要手動加入 SharePoint Site access。</li>
+<li>不需要手動寄 Training invitation email。</li>
+<li>不需要手動檢查是否通過，結果與通過日期會顯示在畫面上。</li>
 <li>不需要手動製作 ESR 證書。</li>
 </ul>
-<p>最後一步「自動產生 email，等待你確認後寄出」的功能，後續會再更新。</p>
+<h2 id="_4">小提醒<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>執行前請先關閉相關 Excel / Outlook 草稿視窗。</li>
+<li>自動操作 SharePoint 或 Outlook 時，請暫時不要使用滑鼠與鍵盤。</li>
+<li>如果人員以前曾經通過，但超過 6 個月，系統不會把舊成績當作這次通過。</li>
+<li>如果 Outlook 或 SharePoint 畫面卡住，先關閉相關視窗，再重新執行該步驟。</li>
+<li>此工具已接近完整自動化，但仍可能因 Outlook / SharePoint 介面更新而出現小 bug，發現後再修。</li>
+</ul>
 
 
 

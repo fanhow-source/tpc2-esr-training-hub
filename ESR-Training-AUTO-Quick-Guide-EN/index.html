@@ -944,10 +944,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#workflow" class="md-nav__link">
+  <a href="#before-you-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Workflow
+        Before You Start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Workflow
       
     </span>
   </a>
@@ -959,6 +970,17 @@
     <span class="md-ellipsis">
       
         What Is Automated
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
       
     </span>
   </a>
@@ -1036,10 +1058,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#workflow" class="md-nav__link">
+  <a href="#before-you-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Workflow
+        Before You Start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Workflow
       
     </span>
   </a>
@@ -1051,6 +1084,17 @@
     <span class="md-ellipsis">
       
         What Is Automated
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes
       
     </span>
   </a>
@@ -1075,12 +1119,12 @@
 
 
 <h1 id="esr-pcp-training-automation-quick-guide">ESR P/CP Training Automation - Quick Guide<a class="headerlink" href="#esr-pcp-training-automation-quick-guide" title="Permanent link">&para;</a></h1>
-<p>The ESR P/CP training workflow is now around 80% automated and ready for day-to-day use.</p>
+<p>The ESR P/CP training workflow is now around <strong>95% automated</strong> and ready for day-to-day use. A few small bugs may still appear as Outlook or SharePoint changes; these will be fixed as they are found.</p>
 <p>Email templates are stored here:</p>
 <div class="highlight"><pre><span></span><code>\OAIC Ltd\PROJECT TWSHXESR - Documents\General\Training Hub\Training Templates
 </code></pre></div>
 <p>Before using the templates, please update the signature at the bottom so it shows your own name.</p>
-<h2 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">&para;</a></h2>
+<h2 id="before-you-start">Before You Start<a class="headerlink" href="#before-you-start" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Use <code>Person _ CP Candidate Request.oft</code> when asking a contractor to provide the list of people who need Person or Competent Person training.</li>
 <li>When the contractor returns the completed register, save it in:</li>
@@ -1088,7 +1132,7 @@
 <div class="highlight"><pre><span></span><code>\OAIC Ltd\PROJECT TWSHXESR - Documents\General\Training Hub\01_P_CP Candidate Lists
 </code></pre></div>
 <ol>
-<li>Go to:</li>
+<li>Open the automation folder:</li>
 </ol>
 <div class="highlight"><pre><span></span><code>\OAIC Ltd\PROJECT TWSHXESR - Documents\General\Safety Document - SFD Register
 </code></pre></div>
@@ -1096,24 +1140,77 @@
 <li>Double-click either:</li>
 </ol>
 <div class="highlight"><pre><span></span><code>Run ESR Training Automation (English).cmd
-Run ESR Training Automation (Chinese).cmd
+Run ESR Training Automation (中文).cmd
 </code></pre></div>
+<h2 id="recommended-workflow">Recommended Workflow<a class="headerlink" href="#recommended-workflow" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Follow steps <code>1</code> to <code>4</code> in the tool. Step <code>5</code> is still being tested.</li>
-<li>The ESR certificate will be generated automatically and saved here:</li>
+<li><code>Import contractor P/CP candidate lists</code></li>
+<li>Imports the contractor's completed candidate register into <code>TWSHXHV_ESR_OverallRegister</code>.</li>
+<li>
+<p>The processed candidate file is moved to <code>Archive</code>.</p>
+</li>
+<li>
+<p><code>Add pending trainees to SharePoint Site access</code></p>
+</li>
+<li>Opens the Training Hub and adds pending white-background trainees to Site access.</li>
+<li>
+<p>Please do not use the mouse or keyboard while this step is running.</p>
+</li>
+<li>
+<p><code>Send training invitation emails</code></p>
+</li>
+<li>Opens the correct email template for Person and CP.</li>
+<li>Person recipients are added to BCC and sent automatically.</li>
+<li>CP recipients are added to BCC and sent automatically.</li>
+<li>
+<p>Please check the pending white-background list before running this step, as it will send the emails.</p>
+</li>
+<li>
+<p><code>Scan pending white-background entries</code></p>
+</li>
+<li>
+<p>Shows the trainees still waiting to be processed.</p>
+</li>
+<li>
+<p><code>Check Training Hub result status</code></p>
+</li>
+<li>Searches the Training Hub result workbooks.</li>
+<li>Person passing score: <code>&gt;= 36</code>.</li>
+<li>CP passing score: both Module 1 and Module 2 must be <code>&gt;= 20</code>.</li>
+<li>Only results with a <code>Completion time</code> within roughly the last 6 months are treated as valid.</li>
+<li>If the tool only finds an older matching name, it is shown as an old reference record and is not treated as <code>PASSED</code>.</li>
+<li>
+<p>If a valid recent result is passed, the screen shows the date when the person <code>PASSED</code>.</p>
+</li>
+<li>
+<p><code>Generate PDF certificates for PASSED trainees</code></p>
+</li>
+<li>Automatically creates non-editable PDF certificates only for trainees with a valid recent <code>PASSED</code> result.</li>
+<li>Certificates are saved here:</li>
 </ol>
 <div class="highlight"><pre><span></span><code>\OAIC Ltd\PROJECT TWSHXESR - Documents\General\Certificates - CRT\2. Ready to be uploaded
 </code></pre></div>
 <ol>
-<li>Use the <code>Person Training - Certificate</code> or <code>CP Training - Certificate</code> email template, attach the generated certificate, and send it to the trainee who has passed.</li>
+<li><code>Prepare Outlook certificate email attachment</code></li>
+<li>Use the <code>Person Training - Certificate</code> or <code>CP Training - Certificate</code> template.</li>
+<li>Send the generated PDF certificate to the trainee who has passed.</li>
 </ol>
 <h2 id="what-is-automated">What Is Automated<a class="headerlink" href="#what-is-automated" title="Permanent link">&para;</a></h2>
 <ul>
 <li>No manual key-in of trainee details.</li>
-<li>No manual pass/fail checking; the result is shown on screen.</li>
-<li>No manual certificate preparation.</li>
+<li>No manual SharePoint Site access entry.</li>
+<li>No manual training invitation email preparation.</li>
+<li>No manual pass/fail checking; the result and passed date are shown on screen.</li>
+<li>No manual ESR certificate preparation.</li>
 </ul>
-<p>The final step, where the email is prepared automatically and left for your review before sending, will be added in a future update.</p>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Close related Excel files and Outlook drafts before running the tool.</li>
+<li>Please leave the mouse and keyboard alone while SharePoint or Outlook automation is running.</li>
+<li>If someone passed before but the result is older than 6 months, the tool will not use that old result as the current pass.</li>
+<li>If Outlook or SharePoint gets stuck, close the related windows and run that step again.</li>
+<li>The tool is now close to fully automated, but small bugs may still appear when Microsoft updates Outlook or SharePoint.</li>
+</ul>
 
 
 
