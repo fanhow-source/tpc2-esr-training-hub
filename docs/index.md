@@ -127,7 +127,7 @@
       <div class="oaic-step-badge">Step 4</div>
       <p class="oaic-guide-card__label">Safety competence</p>
       <h3>ESR Training</h3>
-      <p>Prepare candidate lists, run the training tool and create certificates.</p>
+      <p>Import candidate lists, add Site access, send invitations, check recent results and create certificates.</p>
       <div class="oaic-guide-card__links">
         <a href="ESR-Training-AUTO-Quick-Guide-EN/">English Guide</a>
         <a href="ESR-Training-AUTO-Quick-Guide-ZH/">中文指南</a>
@@ -176,6 +176,6 @@
 
 <div class="oaic-footer">
   <strong>OAIC Power System Solutions</strong><br>
-  Internal Documentation Portal · Version v0.4<br>
-  Maintained by Charlie Tseng · Last updated: 2026-07-07
+  Internal Documentation Portal · Version v0.5<br>
+  Maintained by Charlie Tseng · Last updated: 2026-07-08
 </div>
