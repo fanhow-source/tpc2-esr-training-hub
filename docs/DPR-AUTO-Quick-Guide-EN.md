@@ -37,8 +37,8 @@ The idea is to reduce repeated manual work, so we can spend more time checking t
 
 ## Small Reminders
 
+- Because the DPR automation now checks quite a few rules, including dates, activities, photo pages, macros, page layout, and fields, it may take around 1 minute to generate the new report. If the CMD window stays open for a little while, please just give it a moment; this is normal.
 - If rows are added or deleted in `Teams offshore`, please take a quick look at the nearby times.
 - This is a `.docm` file because macros are needed for the automation. Word does not allow AutoSave for this file type.
 - A quick `Ctrl + S` before closing would be perfect.
 - If the DPR generation fails, please close Word completely and run it again.
-
