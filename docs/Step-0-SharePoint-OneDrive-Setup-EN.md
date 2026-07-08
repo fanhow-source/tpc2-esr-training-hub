@@ -20,7 +20,8 @@ Find the required project folders and use **Sync** to add them to your computer 
 |---|---|
 | 3DLA MoM | PROJECT TWSHXESR / Documents / General / 3-Day Look Ahead - 3DLA / MoM |
 | 3DLA Overview | PROJECT TWSHXESR / Documents / General / 3-Day Look Ahead - 3DLA / Overview |
-| Training Hub | PROJECT TWSHXESR / Documents / General / Training Hub |
+| ESR Training automation | PROJECT TWSHXESR / Documents / General / ESR AutoDoc Hub / 04_ESR Training |
+| ESR Register | PROJECT TWSHXESR / Documents / General / Safety Document - SFD Register |
 | DPR | PROJECT TWSHXHV / Documents / General / 08. Communication / 01. Report / offshore daily report |
 
 Use the folder that is actively synced on your computer
@@ -42,6 +43,14 @@ C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-D
 ```
 
 ```text
+C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\ESR AutoDoc Hub\04_ESR Training
+```
+
+```text
+C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\Safety Document - SFD Register
+```
+
+```text
 C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXHV - Documents\General\08. Communication\01. Report\offshore daily report
 ```
 
@@ -56,7 +65,7 @@ Check the latest files for the relevant workflow
 - Latest 3DLA MoM automation file
 - Latest 3DLA Overview automation file
 - Latest DPR automation file
-- Latest Training Hub automation file
+- Latest ESR Training automation file
 - Current template version where applicable, for example the 04/07 template version
 
 Do not run the automation while the required file is still cloud-only
@@ -74,7 +83,7 @@ This prevents Office from locking the file while the automation is trying to edi
 | SharePoint folder synced | Folder appears in local OneDrive |
 | Latest automation file opened once | File is downloaded locally |
 | Related Word or Excel files closed | No file lock issue |
-| Correct workflow folder selected | MoM, Overview, DPR or Training Hub path matches the task |
+| Correct workflow folder selected | MoM, Overview, DPR or ESR Training path matches the task |
 
 ## If the automation cannot find the file
 

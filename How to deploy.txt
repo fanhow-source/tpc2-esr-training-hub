@@ -8,14 +8,13 @@ python -m mkdocs serve
 再用powershell跑：
 
 .\deploy.ps1
+python -m mkdocs gh-deploy --force --clean
 
 這樣就會自動 build、commit、push、deploy，最後開啟 GitHub Pages。
 
 
 如果出現一些紫色文字，表示 push to GitHub 沒成功
 再執行
-
-python -m mkdocs gh-deploy --force --clean
 
 有時新版本跑不出來，也可以用
 python -m mkdocs build --clean

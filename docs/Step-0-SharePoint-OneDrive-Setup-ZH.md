@@ -20,7 +20,8 @@ https://oaicltd.sharepoint.com/_layouts/15/sharepoint.aspx
 |---|---|
 | 3DLA MoM | PROJECT TWSHXESR / Documents / General / 3-Day Look Ahead - 3DLA / MoM |
 | 3DLA Overview | PROJECT TWSHXESR / Documents / General / 3-Day Look Ahead - 3DLA / Overview |
-| Training Hub | PROJECT TWSHXESR / Documents / General / Training Hub |
+| ESR Training automation | PROJECT TWSHXESR / Documents / General / ESR AutoDoc Hub / 04_ESR Training |
+| ESR Register | PROJECT TWSHXESR / Documents / General / Safety Document - SFD Register |
 | DPR | PROJECT TWSHXHV / Documents / General / 08. Communication / 01. Report / offshore daily report |
 
 請使用目前在你電腦上正常同步的資料夾
@@ -42,6 +43,14 @@ C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-D
 ```
 
 ```text
+C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\ESR AutoDoc Hub\04_ESR Training
+```
+
+```text
+C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\Safety Document - SFD Register
+```
+
+```text
 C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXHV - Documents\General\08. Communication\01. Report\offshore daily report
 ```
 
@@ -56,7 +65,7 @@ C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXHV - Documents\General\08. 
 - 最新 3DLA MoM automation file
 - 最新 3DLA Overview automation file
 - 最新 DPR automation file
-- 最新 Training Hub automation file
+- 最新 ESR Training automation file
 - 目前使用的 template version，例如需要時包含 04/07 版本
 
 如果檔案還是 cloud-only 狀態，請不要直接執行 automation
@@ -74,7 +83,7 @@ C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXHV - Documents\General\08. 
 | SharePoint 資料夾已同步 | 資料夾出現在本機 OneDrive |
 | 最新 automation file 已點擊或開啟一次 | 檔案已下載到本機 |
 | 相關 Word 或 Excel 已關閉 | 不會發生檔案鎖定 |
-| 選擇正確 workflow 資料夾 | MoM、Overview、DPR 或 Training Hub 路徑正確 |
+| 選擇正確 workflow 資料夾 | MoM、Overview、DPR 或 ESR Training 路徑正確 |
 
 ## 如果 automation 找不到檔案
 
