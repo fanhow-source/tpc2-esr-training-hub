@@ -955,6 +955,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#key-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Locations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recommended-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1069,6 +1080,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#key-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Locations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recommended-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1119,47 +1141,64 @@
 
 
 <h1 id="esr-pcp-training-automation-quick-guide">ESR P/CP Training Automation - Quick Guide<a class="headerlink" href="#esr-pcp-training-automation-quick-guide" title="Permanent link">&para;</a></h1>
-<p>The ESR P/CP training workflow is now around <strong>95% automated</strong> and ready for day-to-day use. A few small bugs may still appear as Outlook or SharePoint changes; these will be fixed as they are found.</p>
-<p>Email templates are stored here:</p>
-<div class="highlight"><pre><span></span><code>\OAIC Ltd\PROJECT TWSHXESR - Documents\General\Training Hub\Training Templates
+<p>The ESR P/CP Training workflow is now around <strong>95% automated</strong> and ready for day-to-day use. A few small bugs may still appear as Outlook or SharePoint changes; these will be fixed as they are found.</p>
+<p>Main folder:</p>
+<div class="highlight"><pre><span></span><code>C:\Users\&lt;UserName&gt;\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\ESR AutoDoc Hub\04_ESR Training
 </code></pre></div>
-<p>Before using the templates, please update the signature at the bottom so it shows your own name.</p>
+<p>Double-click:</p>
+<div class="highlight"><pre><span></span><code>Run ESR Training Automation (English).cmd
+</code></pre></div>
+<p>or use the Chinese launcher:</p>
+<div class="highlight"><pre><span></span><code>Run ESR Training Automation (中文).cmd
+</code></pre></div>
 <h2 id="before-you-start">Before You Start<a class="headerlink" href="#before-you-start" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Use <code>Person _ CP Candidate Request.oft</code> when asking a contractor to provide the list of people who need Person or Competent Person training.</li>
-<li>When the contractor returns the completed register, save it in:</li>
+<li>When the contractor returns the completed register, save it here:</li>
 </ol>
-<div class="highlight"><pre><span></span><code>\OAIC Ltd\PROJECT TWSHXESR - Documents\General\Training Hub\01_P_CP Candidate Lists
+<div class="highlight"><pre><span></span><code>04_ESR Training\01_Inbox\P_CP Candidate Lists
+</code></pre></div>
+<p>The file name should normally follow this pattern:</p>
+<div class="highlight"><pre><span></span><code>TPC2_ESR_P_CP_Training_Register_[Company Name].xlsx
 </code></pre></div>
 <ol>
-<li>Open the automation folder:</li>
+<li>Close related Excel files and Outlook draft windows before running the tool.</li>
 </ol>
-<div class="highlight"><pre><span></span><code>\OAIC Ltd\PROJECT TWSHXESR - Documents\General\Safety Document - SFD Register
+<h2 id="key-locations">Key Locations<a class="headerlink" href="#key-locations" title="Permanent link">&para;</a></h2>
+<p>Email templates:</p>
+<div class="highlight"><pre><span></span><code>04_ESR Training\00_Template\Training email Templates
 </code></pre></div>
-<ol>
-<li>Double-click either:</li>
-</ol>
-<div class="highlight"><pre><span></span><code>Run ESR Training Automation (English).cmd
-Run ESR Training Automation (中文).cmd
+<p>Training result Excel files:</p>
+<div class="highlight"><pre><span></span><code>04_ESR Training\02_Processing
 </code></pre></div>
+<p>Generated certificates:</p>
+<div class="highlight"><pre><span></span><code>04_ESR Training\04_Certificates
+</code></pre></div>
+<p>The official register is not moved into the AutoDoc Hub. It stays here:</p>
+<div class="highlight"><pre><span></span><code>C:\Users\&lt;UserName&gt;\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\Safety Document - SFD Register\TWSHXHV_ESR_OverallRegister.xlsm
+</code></pre></div>
+<p>The script writes candidate data into the <code>Old Training Register</code> sheet in that workbook.</p>
 <h2 id="recommended-workflow">Recommended Workflow<a class="headerlink" href="#recommended-workflow" title="Permanent link">&para;</a></h2>
 <ol>
 <li><code>Import contractor P/CP candidate lists</code></li>
-<li>Imports the contractor's completed candidate register into <code>TWSHXHV_ESR_OverallRegister</code>.</li>
+<li>Reads contractor returned files from <code>01_Inbox\P_CP Candidate Lists</code>.</li>
+<li>Writes the data into the <code>Old Training Register</code> sheet in the official <code>TWSHXHV_ESR_OverallRegister.xlsm</code>.</li>
+<li>Keeps the rows without fill colour so they remain identifiable as pending white-background entries.</li>
+<li>Automatically excludes the example rows at the bottom of the contractor template.</li>
 <li>
-<p>The processed candidate file is moved to <code>Archive</code>.</p>
+<p>Moves processed contractor files to <code>99_Archive\P_CP Candidate Lists</code>.</p>
 </li>
 <li>
 <p><code>Add pending trainees to SharePoint Site access</code></p>
 </li>
-<li>Opens the Training Hub and adds pending white-background trainees to Site access.</li>
+<li>Opens the Training Hub page and adds pending white-background trainees to Site access.</li>
 <li>
-<p>Please do not use the mouse or keyboard while this step is running.</p>
+<p>Please do not use the mouse or keyboard while this step is running. Grab a tea or take a quick break and let it finish.</p>
 </li>
 <li>
 <p><code>Send training invitation emails</code></p>
 </li>
-<li>Opens the correct email template for Person and CP.</li>
+<li>Opens the correct Outlook template for Person and CP.</li>
 <li>Person recipients are added to BCC and sent automatically.</li>
 <li>CP recipients are added to BCC and sent automatically.</li>
 <li>
@@ -1174,7 +1213,7 @@ Run ESR Training Automation (中文).cmd
 <li>
 <p><code>Check Training Hub result status</code></p>
 </li>
-<li>Searches the Training Hub result workbooks.</li>
+<li>Searches the Training Hub result workbooks in <code>02_Processing</code>.</li>
 <li>Person passing score: <code>&gt;= 36</code>.</li>
 <li>CP passing score: both Module 1 and Module 2 must be <code>&gt;= 20</code>.</li>
 <li>Only results with a <code>Completion time</code> within roughly the last 6 months are treated as valid.</li>
@@ -1185,15 +1224,18 @@ Run ESR Training Automation (中文).cmd
 <li>
 <p><code>Generate PDF certificates for PASSED trainees</code></p>
 </li>
-<li>Automatically creates non-editable PDF certificates only for trainees with a valid recent <code>PASSED</code> result.</li>
-<li>Certificates are saved here:</li>
-</ol>
-<div class="highlight"><pre><span></span><code>\OAIC Ltd\PROJECT TWSHXESR - Documents\General\Certificates - CRT\2. Ready to be uploaded
-</code></pre></div>
-<ol>
-<li><code>Prepare Outlook certificate email attachment</code></li>
-<li>Use the <code>Person Training - Certificate</code> or <code>CP Training - Certificate</code> template.</li>
-<li>Send the generated PDF certificate to the trainee who has passed.</li>
+<li>Automatically creates non-editable image-style PDF certificates only for trainees with a valid recent <code>PASSED</code> result.</li>
+<li>Person certificates are saved in <code>04_Certificates\Person</code>.</li>
+<li>
+<p>CP certificates are saved in <code>04_Certificates\Competent Person</code>.</p>
+</li>
+<li>
+<p><code>Send certificate email</code></p>
+</li>
+<li>Uses the <code>Person Training - Certificate</code> or <code>CP Training - Certificate</code> template.</li>
+<li>Fills in the recipient email.</li>
+<li>Attaches the generated PDF certificate.</li>
+<li>Sends the email directly to the trainee who has passed.</li>
 </ol>
 <h2 id="what-is-automated">What Is Automated<a class="headerlink" href="#what-is-automated" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1202,6 +1244,7 @@ Run ESR Training Automation (中文).cmd
 <li>No manual training invitation email preparation.</li>
 <li>No manual pass/fail checking; the result and passed date are shown on screen.</li>
 <li>No manual ESR certificate preparation.</li>
+<li>No manual certificate attachment and email preparation.</li>
 </ul>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
