@@ -1188,29 +1188,26 @@
 <p>大家好，這份 quick guide 是給每天要產生 ESR 3DLA MoM 的同事使用。</p>
 <p>這個自動化工具會幫忙產生隔天的 MoM Word，並把對應日期的 3DLA Overview Excel 內容貼到 Attachment A。它主要是幫大家省掉重複操作，讓我們把時間留給真正重要的內容檢查、ESR 狀態、SIMOPS 和 interface 確認。</p>
 <h2 id="_1">請先確認你使用哪一個資料夾<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>目前有兩組路徑可以使用。請依照你電腦上的 OneDrive 狀態選擇正確的資料夾。</p>
+<p>請使用已同步到電腦的 OAIC Ltd project folders。</p>
 <table>
 <thead>
 <tr>
-<th>使用者</th>
-<th>MoM 資料夾</th>
-<th>Overview 資料夾</th>
+<th>資料夾</th>
+<th>路徑</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Charlie 新 OneDrive 路徑</td>
-<td><code>C:\Users\CharlieTseng\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM</code></td>
-<td><code>C:\Users\CharlieTseng\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview</code></td>
+<td>MoM</td>
+<td><code>OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM</code></td>
 </tr>
 <tr>
-<td>同事沿用原本路徑</td>
-<td><code>C:\Users\CharlieTseng\OAIC Ltd\PROJECT TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM</code></td>
-<td><code>C:\Users\CharlieTseng\OAIC Ltd\PROJECT TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview</code></td>
+<td>Overview</td>
+<td><code>OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview</code></td>
 </tr>
 </tbody>
 </table>
-<p>小提醒：請在你實際使用的 MoM 資料夾裡執行 <code>.cmd</code>。程式會優先使用同一組 3DLA 資料夾底下的 <code>..\Overview</code>，避免抓到另一個 OneDrive 路徑的 Excel。</p>
+<p>小提醒：請在 MoM 資料夾裡執行 <code>.cmd</code>。程式會優先使用旁邊的 <code>..\Overview</code>。</p>
 <h2 id="_2">使用前請先確認<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>目標日期的 <code>3DLA Overview</code> Excel 已經完成並儲存。</li>

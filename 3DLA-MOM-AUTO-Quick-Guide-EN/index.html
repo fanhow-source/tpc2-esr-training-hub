@@ -1188,29 +1188,26 @@
 <p>Hi everyone, this quick guide is for colleagues who generate the daily ESR 3DLA MoM.</p>
 <p>The automation creates the next day's MoM Word file and inserts the matching 3DLA Overview Excel into Attachment A. The goal is to reduce repeated formatting work, so we can spend more time checking the actual content, ESR status, SIMOPS, and interfaces.</p>
 <h2 id="please-check-which-folder-you-are-using">Please Check Which Folder You Are Using<a class="headerlink" href="#please-check-which-folder-you-are-using" title="Permanent link">&para;</a></h2>
-<p>There are currently two folder sets in use. Please use the one that matches your OneDrive setup.</p>
+<p>Please use the synced OAIC Ltd project folders below.</p>
 <table>
 <thead>
 <tr>
-<th>User / setup</th>
-<th>MoM folder</th>
-<th>Overview folder</th>
+<th>Folder</th>
+<th>Path</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Charlie new OneDrive path</td>
-<td><code>C:\Users\CharlieTseng\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM</code></td>
-<td><code>C:\Users\CharlieTseng\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview</code></td>
+<td>MoM</td>
+<td><code>OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM</code></td>
 </tr>
 <tr>
-<td>Colleagues using the original path</td>
-<td><code>C:\Users\CharlieTseng\OAIC Ltd\PROJECT TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM</code></td>
-<td><code>C:\Users\CharlieTseng\OAIC Ltd\PROJECT TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview</code></td>
+<td>Overview</td>
+<td><code>OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview</code></td>
 </tr>
 </tbody>
 </table>
-<p>Small reminder: run the <code>.cmd</code> from the MoM folder you are actually using. The script will first look for <code>..\Overview</code> next to that MoM folder, so it does not accidentally use the Excel files from the other OneDrive path.</p>
+<p>Small reminder: run the <code>.cmd</code> from the MoM folder. The script will first look for <code>..\Overview</code> next to that MoM folder.</p>
 <h2 id="before-you-start">Before You Start<a class="headerlink" href="#before-you-start" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Complete and save the target day's <code>3DLA Overview</code> Excel.</li>
