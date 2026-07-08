@@ -6,7 +6,7 @@ python -m mkdocs serve
 本地確認 OK 後 Ctrl + C
 
 再用powershell跑：
-
+cd 'C:\Users\CharlieTseng\Desktop\tpc2-esr-training-hub'
 .\deploy.ps1
 python -m mkdocs gh-deploy --force --clean
 

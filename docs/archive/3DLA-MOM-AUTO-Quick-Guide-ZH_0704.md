@@ -51,7 +51,7 @@
 如果你確定要重新產生，可以用 PowerShell 執行：
 
 ```powershell
-powershell -Sta -NoProfile -ExecutionPolicy Bypass -File "C:\Users\CharlieTseng\OAIC Ltd\PROJECT TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM\Generate Tomorrow 3DLA MoM - Code.ps1" -TargetDate "2026-07-04" -Overwrite -Open
+powershell -Sta -NoProfile -ExecutionPolicy Bypass -File "OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM\Generate Tomorrow 3DLA MoM - Code.ps1" -TargetDate "2026-07-04" -Overwrite -Open
 ```
 
 請把日期改成你要重新產生的日期。
@@ -71,4 +71,3 @@ powershell -Sta -NoProfile -ExecutionPolicy Bypass -File "C:\Users\CharlieTseng\
 - 這份自動化主要幫忙做「產生底稿」和「貼 Overview」，最後內容仍需要人工檢查。
 - 如果 Overview Excel 當天工項很多，圖片會自動依頁面空間縮放，但仍建議打開 Word 看一次。
 - 每天多省一點重複操作時間，大家就能多留一點精神給 ESR / SIMOPS / interface 的確認。
-

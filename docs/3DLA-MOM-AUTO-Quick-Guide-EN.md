@@ -6,14 +6,14 @@ The automation creates the next day's MoM Word file and inserts the matching 3DL
 
 ## Please Check Which Folder You Are Using
 
-There are currently two folder sets in use. Please use the one that matches your OneDrive setup.
+Please use the synced OAIC Ltd project folders below.
 
-| User / setup | MoM folder | Overview folder |
-| --- | --- | --- |
-| Charlie new OneDrive path | `C:\Users\CharlieTseng\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM` | `C:\Users\CharlieTseng\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview` |
-| Colleagues using the original path | `C:\Users\CharlieTseng\OAIC Ltd\PROJECT TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM` | `C:\Users\CharlieTseng\OAIC Ltd\PROJECT TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview` |
+| Folder | Path |
+| --- | --- |
+| MoM | `OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM` |
+| Overview | `OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview` |
 
-Small reminder: run the `.cmd` from the MoM folder you are actually using. The script will first look for `..\Overview` next to that MoM folder, so it does not accidentally use the Excel files from the other OneDrive path.
+Small reminder: run the `.cmd` from the MoM folder. The script will first look for `..\Overview` next to that MoM folder.
 
 ## Before You Start
 
@@ -82,4 +82,3 @@ Please change the date to the report date you need.
 - This tool prepares the draft. It does not replace the final human check.
 - If the Overview has many activities, please open the Word file and check that the image is still readable.
 - Saving a few minutes on repeated formatting gives us a little more space to focus on ESR, SIMOPS, and interface checks.
-

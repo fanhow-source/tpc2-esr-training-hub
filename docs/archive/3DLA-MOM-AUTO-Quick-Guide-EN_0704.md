@@ -51,7 +51,7 @@ If a MoM Word file already exists for the same date, the tool will stop and warn
 If you are sure you want to regenerate it, run this in PowerShell:
 
 ```powershell
-powershell -Sta -NoProfile -ExecutionPolicy Bypass -File "C:\Users\CharlieTseng\OAIC Ltd\PROJECT TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM\Generate Tomorrow 3DLA MoM - Code.ps1" -TargetDate "2026-07-04" -Overwrite -Open
+powershell -Sta -NoProfile -ExecutionPolicy Bypass -File "OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM\Generate Tomorrow 3DLA MoM - Code.ps1" -TargetDate "2026-07-04" -Overwrite -Open
 ```
 
 Please change the date to the report date you need.
@@ -71,4 +71,3 @@ Please change the date to the report date you need.
 - This automation prepares the report draft and inserts the Overview. The final content still needs a human check.
 - If the Overview has many activities, the image will be scaled to fit the page, but it is still worth opening the Word file for a quick look.
 - Saving a few minutes on repeated formatting gives us a little more space to focus on ESR, SIMOPS, and interface checks.
-

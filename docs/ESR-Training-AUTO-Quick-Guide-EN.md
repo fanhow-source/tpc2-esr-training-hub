@@ -5,7 +5,7 @@ The ESR P/CP Training workflow is now around **95% automated** and ready for day
 Main folder:
 
 ```text
-C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\ESR AutoDoc Hub\04_ESR Training
+OAIC Ltd\PROJECT_TWSHXESR - Documents\General\ESR AutoDoc Hub\04_ESR Training
 ```
 
 Double-click:
@@ -60,7 +60,7 @@ Generated certificates:
 The official register is not moved into the AutoDoc Hub. It stays here:
 
 ```text
-C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\Safety Document - SFD Register\TWSHXHV_ESR_OverallRegister.xlsm
+OAIC Ltd\PROJECT_TWSHXESR - Documents\General\Safety Document - SFD Register\TWSHXHV_ESR_OverallRegister.xlsm
 ```
 
 The script writes candidate data into the `Old Training Register` sheet in that workbook.

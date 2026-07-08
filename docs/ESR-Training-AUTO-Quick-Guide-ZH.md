@@ -5,7 +5,7 @@
 主入口資料夾：
 
 ```text
-C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\ESR AutoDoc Hub\04_ESR Training
+OAIC Ltd\PROJECT_TWSHXESR - Documents\General\ESR AutoDoc Hub\04_ESR Training
 ```
 
 請雙擊：
@@ -60,7 +60,7 @@ Training result Excel：
 正式 Register 不搬到 AutoDoc Hub，仍保留在：
 
 ```text
-C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\Safety Document - SFD Register\TWSHXHV_ESR_OverallRegister.xlsm
+OAIC Ltd\PROJECT_TWSHXESR - Documents\General\Safety Document - SFD Register\TWSHXHV_ESR_OverallRegister.xlsm
 ```
 
 腳本會自動把候選人資料寫入這份 workbook 的 `Old Training Register` 工作頁。

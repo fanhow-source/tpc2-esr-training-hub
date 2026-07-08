@@ -35,23 +35,23 @@ https://oaicltd.sharepoint.com/_layouts/15/sharepoint.aspx
 常見範例如下
 
 ```text
-C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM
+OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM
 ```
 
 ```text
-C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview
+OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview
 ```
 
 ```text
-C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\ESR AutoDoc Hub\04_ESR Training
+OAIC Ltd\PROJECT_TWSHXESR - Documents\General\ESR AutoDoc Hub\04_ESR Training
 ```
 
 ```text
-C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\Safety Document - SFD Register
+OAIC Ltd\PROJECT_TWSHXESR - Documents\General\Safety Document - SFD Register
 ```
 
 ```text
-C:\Users\<UserName>\OneDrive - OAIC Ltd\PROJECT_TWSHXHV - Documents\General\08. Communication\01. Report\offshore daily report
+OAIC Ltd\PROJECT_TWSHXHV - Documents\General\08. Communication\01. Report\offshore daily report
 ```
 
 如果電腦裡有兩組類似路徑，請使用目前 OneDrive 正在同步的那一組

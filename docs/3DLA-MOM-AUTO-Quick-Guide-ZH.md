@@ -6,14 +6,14 @@
 
 ## 請先確認你使用哪一個資料夾
 
-目前有兩組路徑可以使用。請依照你電腦上的 OneDrive 狀態選擇正確的資料夾。
+請使用已同步到電腦的 OAIC Ltd project folders。
 
-| 使用者 | MoM 資料夾 | Overview 資料夾 |
-| --- | --- | --- |
-| Charlie 新 OneDrive 路徑 | `C:\Users\CharlieTseng\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM` | `C:\Users\CharlieTseng\OneDrive - OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview` |
-| 同事沿用原本路徑 | `C:\Users\CharlieTseng\OAIC Ltd\PROJECT TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM` | `C:\Users\CharlieTseng\OAIC Ltd\PROJECT TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview` |
+| 資料夾 | 路徑 |
+| --- | --- |
+| MoM | `OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM` |
+| Overview | `OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview` |
 
-小提醒：請在你實際使用的 MoM 資料夾裡執行 `.cmd`。程式會優先使用同一組 3DLA 資料夾底下的 `..\Overview`，避免抓到另一個 OneDrive 路徑的 Excel。
+小提醒：請在 MoM 資料夾裡執行 `.cmd`。程式會優先使用旁邊的 `..\Overview`。
 
 ## 使用前請先確認
 
@@ -82,4 +82,3 @@ powershell -Sta -NoProfile -ExecutionPolicy Bypass -File "Generate Tomorrow 3DLA
 - 這份工具是幫忙產生底稿，不是取代最後檢查。
 - 如果 Overview 當天工項很多，請一定打開 Word 看一次圖片是否清楚。
 - 每天少一點重複操作，就多一點時間留給 ESR / SIMOPS / interface 的確認。
-
