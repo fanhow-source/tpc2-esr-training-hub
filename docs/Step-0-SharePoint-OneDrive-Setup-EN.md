@@ -70,7 +70,45 @@ Check the latest files for the relevant workflow
 
 Do not run the automation while the required file is still cloud-only
 
-## 5. Close related Office files
+## 5. Install Python for ESR Training
+
+Python is currently required by the ESR Training automation. It only needs to be installed once.
+
+**1.** Open the official [Python Releases for Windows](https://www.python.org/downloads/windows/) page. Under a **Stable Release**, download **Windows installer (64-bit)**.
+
+![Download the Windows 64-bit Python installer](assets/esr-python-setup-01-download-64bit.png)
+
+**2.** If HP Sure Click displays a warning, confirm that the file came from `python.org`, then select **Remove protection and open**.
+
+![Allow the official Python installer through HP Sure Click](assets/esr-python-setup-02-hp-sure-click.png)
+
+**3.** Select **Add python.exe to PATH**. Leave **Use admin privileges when installing py.exe** unticked unless administrator approval is requested.
+
+![Select Add python.exe to PATH and install Python](assets/esr-python-setup-03-installer-options.png)
+
+**4.** Select **Install Now** and wait for Python installation to finish.
+
+**5.** Open Windows Search and type `cmd`.
+
+**6.** Select **Open** under **Command Prompt**. Administrator mode is not required.
+
+![Search for and open Command Prompt](assets/esr-python-setup-04-open-command-prompt.png)
+
+**7.** Copy and paste the following complete command into Command Prompt, press **Enter**, and wait until installation finishes:
+
+```cmd
+python -m pip install --user openpyxl pypdf reportlab pillow playwright
+```
+
+![Install all required Python packages in one command](assets/esr-python-setup-05-install-packages.png)
+
+This single command installs all Python packages currently required by the AutoDoc tools.
+
+MoM, Overview and DPR currently use Windows PowerShell and Microsoft Office, so they do not require additional Python packages.
+
+**8.** Close Command Prompt and run the ESR Training launcher again.
+
+## 6. Close related Office files
 
 Before running automation, close the related Word or Excel files
 

@@ -20,6 +20,51 @@ or use the Chinese launcher:
 Run ESR Training Automation (中文).cmd
 ```
 
+## One-Time Python Setup
+
+If the automation reports that Python is not available, install it once as follows:
+
+**1.** Open the official [Python Releases for Windows](https://www.python.org/downloads/windows/) page. Under a **Stable Release**, download **Windows installer (64-bit)**. Do not choose a pre-release, 32-bit, ARM64 or embeddable package.
+
+![Download the Windows 64-bit Python installer](assets/esr-python-setup-01-download-64bit.png)
+
+**2.** If HP Sure Click displays a protection message, first confirm that the file was downloaded from `python.org`, then select **Remove protection and open**.
+
+![Allow the official Python installer through HP Sure Click](assets/esr-python-setup-02-hp-sure-click.png)
+
+**3.** In the Python installer:
+   - Select **Add python.exe to PATH**. This is required.
+   - **Use admin privileges when installing py.exe** is normally optional for a current-user installation. Leave it unticked unless Windows or IT asks for administrator approval.
+
+![Select Add python.exe to PATH and install Python](assets/esr-python-setup-03-installer-options.png)
+
+**4.** Select **Install Now** and wait for Python installation to finish.
+
+**5.** Open Windows Search and type `cmd`.
+
+**6.** Select **Open** under **Command Prompt**. Administrator mode is not required.
+
+![Search for and open Command Prompt](assets/esr-python-setup-04-open-command-prompt.png)
+
+**7.** Copy and paste the following complete command into Command Prompt, press **Enter**, and wait until installation finishes:
+
+```cmd
+python -m pip install --user openpyxl pypdf reportlab pillow playwright
+```
+
+![Install all required Python packages in one command](assets/esr-python-setup-05-install-packages.png)
+
+This single command installs all Python packages currently required by the AutoDoc tools. The other current automations do not need additional Python packages:
+
+| Automation | Required software |
+|---|---|
+| ESR Training | Python 3 and the packages listed above |
+| 3DLA MoM | Windows PowerShell, Microsoft Word and Excel |
+| 3DLA Overview | Windows PowerShell and Microsoft Excel |
+| DPR | Windows PowerShell, Microsoft Word and Excel |
+
+**8.** Close Command Prompt and run `Run ESR Training Automation (English).cmd` again.
+
 ## Before You Start
 
 1. Use `Person _ CP Candidate Request.oft` when asking a contractor to provide the list of people who need Person or Competent Person training.

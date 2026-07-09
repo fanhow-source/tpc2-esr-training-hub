@@ -70,7 +70,45 @@ OAIC Ltd\PROJECT_TWSHXHV - Documents\General\08. Communication\01. Report\offsho
 
 如果檔案還是 cloud-only 狀態，請不要直接執行 automation
 
-## 5. 關閉相關 Office 檔案
+## 5. 為 ESR Training 安裝 Python
+
+目前 ESR Training automation 需要 Python，每台電腦只需安裝一次。
+
+**1.** 開啟 Python 官方的 [Windows 下載頁面](https://www.python.org/downloads/windows/)，在 **Stable Release** 下方下載 **Windows installer (64-bit)**。
+
+![下載 Windows 64-bit Python 安裝程式](assets/esr-python-setup-01-download-64bit.png)
+
+**2.** 如果 HP Sure Click 顯示防護訊息，先確認檔案來自 `python.org`，再點選 **Remove protection and open**。
+
+![允許 HP Sure Click 開啟官方 Python 安裝程式](assets/esr-python-setup-02-hp-sure-click.png)
+
+**3.** 勾選 **Add python.exe to PATH**；除非系統要求管理員授權，否則不要勾選 **Use admin privileges when installing py.exe**。
+
+![勾選 Add python.exe to PATH 並安裝 Python](assets/esr-python-setup-03-installer-options.png)
+
+**4.** 點選 **Install Now**，等待 Python 安裝完成。
+
+**5.** 開啟 Windows 搜尋並輸入 `cmd`。
+
+**6.** 在 **Command Prompt** 下方點選 **Open**，不需要使用系統管理員模式。
+
+![搜尋並開啟 Command Prompt](assets/esr-python-setup-04-open-command-prompt.png)
+
+**7.** 複製以下完整指令，貼到 Command Prompt，按下 **Enter**，並等待套件安裝完成：
+
+```cmd
+python -m pip install --user openpyxl pypdf reportlab pillow playwright
+```
+
+![用一行指令安裝全部 Python 套件](assets/esr-python-setup-05-install-packages.png)
+
+這一行指令會一次安裝目前 AutoDoc 工具需要的所有 Python 套件。
+
+MoM、Overview 與 DPR 目前使用 Windows PowerShell 和 Microsoft Office，不需要額外的 Python 套件。
+
+**8.** 關閉 Command Prompt，再次執行 ESR Training 啟動程式。
+
+## 6. 關閉相關 Office 檔案
 
 執行 automation 前，請先關閉相關的 Word 或 Excel 檔案
 
