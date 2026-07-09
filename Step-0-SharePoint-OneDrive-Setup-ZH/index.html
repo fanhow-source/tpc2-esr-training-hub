@@ -529,10 +529,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-office" class="md-nav__link">
+  <a href="#5-esr-training-python" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. 關閉相關 Office 檔案
+        5. 為 ESR Training 安裝 Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-office" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 關閉相關 Office 檔案
       
     </span>
   </a>
@@ -1135,10 +1146,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-office" class="md-nav__link">
+  <a href="#5-esr-training-python" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. 關閉相關 Office 檔案
+        5. 為 ESR Training 安裝 Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-office" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 關閉相關 Office 檔案
       
     </span>
   </a>
@@ -1250,7 +1272,26 @@
 <li>目前使用的 template version，例如需要時包含 04/07 版本</li>
 </ul>
 <p>如果檔案還是 cloud-only 狀態，請不要直接執行 automation</p>
-<h2 id="5-office">5. 關閉相關 Office 檔案<a class="headerlink" href="#5-office" title="Permanent link">&para;</a></h2>
+<h2 id="5-esr-training-python">5. 為 ESR Training 安裝 Python<a class="headerlink" href="#5-esr-training-python" title="Permanent link">&para;</a></h2>
+<p>目前 ESR Training automation 需要 Python，每台電腦只需安裝一次。</p>
+<p><strong>1.</strong> 開啟 Python 官方的 <a href="https://www.python.org/downloads/windows/">Windows 下載頁面</a>，在 <strong>Stable Release</strong> 下方下載 <strong>Windows installer (64-bit)</strong>。</p>
+<p><img alt="下載 Windows 64-bit Python 安裝程式" src="../assets/esr-python-setup-01-download-64bit.png" /></p>
+<p><strong>2.</strong> 如果 HP Sure Click 顯示防護訊息，先確認檔案來自 <code>python.org</code>，再點選 <strong>Remove protection and open</strong>。</p>
+<p><img alt="允許 HP Sure Click 開啟官方 Python 安裝程式" src="../assets/esr-python-setup-02-hp-sure-click.png" /></p>
+<p><strong>3.</strong> 勾選 <strong>Add python.exe to PATH</strong>；除非系統要求管理員授權，否則不要勾選 <strong>Use admin privileges when installing py.exe</strong>。</p>
+<p><img alt="勾選 Add python.exe to PATH 並安裝 Python" src="../assets/esr-python-setup-03-installer-options.png" /></p>
+<p><strong>4.</strong> 點選 <strong>Install Now</strong>，等待 Python 安裝完成。</p>
+<p><strong>5.</strong> 開啟 Windows 搜尋並輸入 <code>cmd</code>。</p>
+<p><strong>6.</strong> 在 <strong>Command Prompt</strong> 下方點選 <strong>Open</strong>，不需要使用系統管理員模式。</p>
+<p><img alt="搜尋並開啟 Command Prompt" src="../assets/esr-python-setup-04-open-command-prompt.png" /></p>
+<p><strong>7.</strong> 複製以下完整指令，貼到 Command Prompt，按下 <strong>Enter</strong>，並等待套件安裝完成：</p>
+<div class="highlight"><pre><span></span><code>python -m pip install --user openpyxl pypdf reportlab pillow playwright
+</code></pre></div>
+<p><img alt="用一行指令安裝全部 Python 套件" src="../assets/esr-python-setup-05-install-packages.png" /></p>
+<p>這一行指令會一次安裝目前 AutoDoc 工具需要的所有 Python 套件。</p>
+<p>MoM、Overview 與 DPR 目前使用 Windows PowerShell 和 Microsoft Office，不需要額外的 Python 套件。</p>
+<p><strong>8.</strong> 關閉 Command Prompt，再次執行 ESR Training 啟動程式。</p>
+<h2 id="6-office">6. 關閉相關 Office 檔案<a class="headerlink" href="#6-office" title="Permanent link">&para;</a></h2>
 <p>執行 automation 前，請先關閉相關的 Word 或 Excel 檔案</p>
 <p>這可以避免 Office 鎖住檔案，導致 automation 無法正常修改或產生文件</p>
 <h2 id="_1">執行前快速確認<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>

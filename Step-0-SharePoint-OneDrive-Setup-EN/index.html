@@ -499,10 +499,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-close-related-office-files" class="md-nav__link">
+  <a href="#5-install-python-for-esr-training" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Close related Office files
+        5. Install Python for ESR Training
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-close-related-office-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Close related Office files
       
     </span>
   </a>
@@ -1133,10 +1144,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-close-related-office-files" class="md-nav__link">
+  <a href="#5-install-python-for-esr-training" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Close related Office files
+        5. Install Python for ESR Training
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-close-related-office-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Close related Office files
       
     </span>
   </a>
@@ -1248,7 +1270,26 @@
 <li>Current template version where applicable, for example the 04/07 template version</li>
 </ul>
 <p>Do not run the automation while the required file is still cloud-only</p>
-<h2 id="5-close-related-office-files">5. Close related Office files<a class="headerlink" href="#5-close-related-office-files" title="Permanent link">&para;</a></h2>
+<h2 id="5-install-python-for-esr-training">5. Install Python for ESR Training<a class="headerlink" href="#5-install-python-for-esr-training" title="Permanent link">&para;</a></h2>
+<p>Python is currently required by the ESR Training automation. It only needs to be installed once.</p>
+<p><strong>1.</strong> Open the official <a href="https://www.python.org/downloads/windows/">Python Releases for Windows</a> page. Under a <strong>Stable Release</strong>, download <strong>Windows installer (64-bit)</strong>.</p>
+<p><img alt="Download the Windows 64-bit Python installer" src="../assets/esr-python-setup-01-download-64bit.png" /></p>
+<p><strong>2.</strong> If HP Sure Click displays a warning, confirm that the file came from <code>python.org</code>, then select <strong>Remove protection and open</strong>.</p>
+<p><img alt="Allow the official Python installer through HP Sure Click" src="../assets/esr-python-setup-02-hp-sure-click.png" /></p>
+<p><strong>3.</strong> Select <strong>Add python.exe to PATH</strong>. Leave <strong>Use admin privileges when installing py.exe</strong> unticked unless administrator approval is requested.</p>
+<p><img alt="Select Add python.exe to PATH and install Python" src="../assets/esr-python-setup-03-installer-options.png" /></p>
+<p><strong>4.</strong> Select <strong>Install Now</strong> and wait for Python installation to finish.</p>
+<p><strong>5.</strong> Open Windows Search and type <code>cmd</code>.</p>
+<p><strong>6.</strong> Select <strong>Open</strong> under <strong>Command Prompt</strong>. Administrator mode is not required.</p>
+<p><img alt="Search for and open Command Prompt" src="../assets/esr-python-setup-04-open-command-prompt.png" /></p>
+<p><strong>7.</strong> Copy and paste the following complete command into Command Prompt, press <strong>Enter</strong>, and wait until installation finishes:</p>
+<div class="highlight"><pre><span></span><code>python -m pip install --user openpyxl pypdf reportlab pillow playwright
+</code></pre></div>
+<p><img alt="Install all required Python packages in one command" src="../assets/esr-python-setup-05-install-packages.png" /></p>
+<p>This single command installs all Python packages currently required by the AutoDoc tools.</p>
+<p>MoM, Overview and DPR currently use Windows PowerShell and Microsoft Office, so they do not require additional Python packages.</p>
+<p><strong>8.</strong> Close Command Prompt and run the ESR Training launcher again.</p>
+<h2 id="6-close-related-office-files">6. Close related Office files<a class="headerlink" href="#6-close-related-office-files" title="Permanent link">&para;</a></h2>
 <p>Before running automation, close the related Word or Excel files</p>
 <p>This prevents Office from locking the file while the automation is trying to edit or generate records</p>
 <h2 id="quick-check-before-running">Quick check before running<a class="headerlink" href="#quick-check-before-running" title="Permanent link">&para;</a></h2>
