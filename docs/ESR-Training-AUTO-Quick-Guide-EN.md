@@ -20,6 +20,14 @@ or use the Chinese launcher:
 Run ESR Training Automation (中文).cmd
 ```
 
+## What You Will See
+
+After opening the launcher, you should see this CLI menu. Type the command number and press **Enter**.
+
+![ESR Training Automation English CLI menu](assets/esr-training-cli-menu-en.png)
+
+Most of the work is done from this menu. Use the Outlook templates only when the workflow below says so.
+
 ## One-Time Python Setup
 
 If the automation reports that Python is not available, install it once as follows:
@@ -110,46 +118,163 @@ OAIC Ltd\PROJECT_TWSHXESR - Documents\General\Safety Document - SFD Register\TWS
 
 The script writes candidate data into the `Old Training Register` sheet in that workbook.
 
-## Recommended Workflow
+## Workflow Map
 
-1. `Import contractor P/CP candidate lists`
-   - Reads contractor returned files from `01_Inbox\P_CP Candidate Lists`.
-   - Writes the data into the `Old Training Register` sheet in the official `TWSHXHV_ESR_OverallRegister.xlsm`.
-   - Keeps the rows without fill colour so they remain identifiable as pending white-background entries.
-   - Automatically excludes the example rows at the bottom of the contractor template.
-   - Moves processed contractor files to `99_Archive\P_CP Candidate Lists`.
+The picture below is the quickest way to understand the sequence.
 
-2. `Add pending trainees to SharePoint Site access`
-   - Opens the Training Hub page and adds pending white-background trainees to Site access.
-   - Please do not use the mouse or keyboard while this step is running. Grab a tea or take a quick break and let it finish.
+![ESR Training template and CLI command flow](assets/esr-training-template-command-flow.png)
 
-3. `Send training invitation emails`
-   - Opens the correct Outlook template for Person and CP.
-   - Person recipients are added to BCC and sent automatically.
-   - CP recipients are added to BCC and sent automatically.
-   - Please check the pending white-background list before running this step, as it will send the emails.
+Use this table to see when to use an Outlook template and when to run a command in the CLI.
 
-4. `Scan pending white-background entries`
-   - Shows the trainees still waiting to be processed.
+| Stage | Email template | CLI command |
+|---|---|---|
+| Ask contractor for P/CP candidates | `1. Person _ CP Candidate Request.oft` | None |
+| Import returned candidate list | None | `1. Import contractor candidate lists` |
+| Confirm existing valid / possible matches | `2. ESR Training - Candidate Validity Confirmation.oft` | Use only if the Step 1 summary needs contractor confirmation |
+| Add Training Hub Site access | None | `2. Add pending trainees to SharePoint Site access` |
+| Send training invitations | `3.1 Person Training invitation.oft` / `3.2 CP Training invitation.oft` | `3. Send training invitation emails` |
+| Wait for trainees to complete training | None | No command; allow time for results to appear |
+| Check pending trainees | None | `4. Scan pending white-background entries` |
+| Check results | Optional: `4. Person _ CP Re-training Required.oft` if a retake notice is needed | `5. Check Training Hub result status` |
+| Generate certificates | None | `6. Generate PDF certificates for PASSED trainees` |
+| Send certificates | `5.1 Person Training - Certificate.oft` / `5.2 CP Training - Certificate.oft` | `7. Send Outlook certificate emails` |
 
-5. `Check Training Hub result status`
-   - Searches the Training Hub result workbooks in `02_Processing`.
-   - Person passing score: `>= 36`.
-   - CP passing score: both Module 1 and Module 2 must be `>= 20`.
-   - Only results with a `Completion time` within roughly the last 6 months are treated as valid.
-   - If the tool only finds an older matching name, it is shown as an old reference record and is not treated as `PASSED`.
-   - If a valid recent result is passed, the screen shows the date when the person `PASSED`.
+## Step-by-Step Workflow
 
-6. `Generate PDF certificates for PASSED trainees`
-   - Automatically creates non-editable image-style PDF certificates only for trainees with a valid recent `PASSED` result.
-   - Person certificates are saved in `04_Certificates\Person`.
-   - CP certificates are saved in `04_Certificates\Competent Person`.
+### 1. Ask the contractor for the P/CP candidate list
 
-7. `Send certificate email`
-   - Uses the `Person Training - Certificate` or `CP Training - Certificate` template.
-   - Fills in the recipient email.
-   - Attaches the generated PDF certificate.
-   - Sends the email directly to the trainee who has passed.
+**Use email template:** `1. Person _ CP Candidate Request.oft`
+
+1.1 Send this template to the contractor and ask them to complete the P/CP candidate list.
+
+1.2 When the contractor returns the completed file, save it in:
+
+```text
+04_ESR Training\01_Inbox\P_CP Candidate Lists
+```
+
+### 2. Import the returned candidate list
+
+**Run CLI command:** `1. Import contractor candidate lists`
+
+This is the command window option to use:
+
+![ESR Training command window](assets/esr-training-cli-menu-en-current.png)
+
+2.1 The command reads contractor files from `01_Inbox\P_CP Candidate Lists`.
+
+2.2 Before importing anyone, it checks the official `Old Training Register`:
+
+- ESR Training records are valid for `730 days` from the training result date.
+- Email is matched first.
+- If email is not available, full name is checked.
+- Name-only matches are shown as possible matches and are not silently skipped.
+- If a valid record is found, the person is not imported as a pending white-background trainee.
+- If fewer than `30 days` remain, the record is marked `EXPIRING SOON`.
+
+2.3 The command summary shows:
+
+- existing valid records found,
+- new or expired personnel imported,
+- possible matches requiring manual confirmation.
+
+2.4 If someone already has valid ESR Training, the black command window will show a section like:
+
+```text
+COPY TO TEMPLATE 2 - Candidate Validity Confirmation
+```
+
+Copy the names shown under that heading. These are the people who have already passed and do not need to complete training again at this stage.
+
+![Copy the validity confirmation lines from the command window](assets/esr-training-step1-copy-template2-lines.png)
+
+2.5 Open the email templates folder and use the second template:
+
+```text
+2. ESR Training - Candidate Validity Confirmation.oft
+```
+
+![Training email templates with numbering](assets/esr-training-email-templates-numbered.png)
+
+2.6 Paste the copied names into the highlighted part of the email body, then send it to the contractor contact person.
+
+![Paste the copied names into template 2](assets/esr-training-template2-validity-confirmation.png)
+
+2.7 Step 1 does not send emails. It only imports required trainees and prepares a clear summary.
+
+### 3. Add trainees to SharePoint Site access
+
+**Run CLI command:** `2. Add pending trainees to SharePoint Site access`
+
+3.1 The command opens the Training Hub and adds pending white-background trainees to Site access.
+
+3.2 Do not use the mouse or keyboard while this is running. Grab a tea, take a quick break, and let it finish.
+
+### 4. Send training invitation emails
+
+**Run CLI command:** `3. Send training invitation emails`
+
+4.1 The command uses these templates automatically:
+
+- `3.1 Person Training invitation.oft`
+- `3.2 CP Training invitation.oft`
+
+4.2 Person and CP recipients are added to BCC and the emails are sent automatically.
+
+4.3 Check the pending white-background list before running this command, because it really sends the emails.
+
+### 5. Check who is still pending
+
+**Run CLI command:** `4. Scan pending white-background entries`
+
+5.1 This shows the trainees still waiting in the white-background pending list.
+
+5.2 Use this after invitations have been sent, or while waiting for people to complete the training.
+
+### 6. Check Training Hub result status
+
+**Run CLI command:** `5. Check Training Hub result status`
+
+6.1 The command searches the Training Hub result workbooks in `02_Processing`.
+
+6.2 Passing score:
+
+- Person: `>= 36`
+- CP: Module 1 and Module 2 must both be `>= 20`
+
+6.3 For Training Hub result workbooks, only results within roughly the last 6 months are treated as the current attempt. This prevents last year's result from being mistaken as the new attempt.
+
+6.4 This is separate from the Step 1 certificate validity check. Step 1 checks whether an existing record in the official register is still valid within `730 days`.
+
+6.5 If someone needs to be asked to retake the training, use:
+
+```text
+4. Person _ CP Re-training Required.oft
+```
+
+### 7. Generate PDF certificates
+
+**Run CLI command:** `6. Generate PDF certificates for PASSED trainees`
+
+7.1 The command creates non-editable image-style PDF certificates only for trainees with a valid `PASSED` result.
+
+7.2 Certificates are saved in:
+
+```text
+04_Certificates\Person
+04_Certificates\Competent Person
+```
+
+### 8. Send certificate emails
+
+**Run CLI command:** `7. Send Outlook certificate emails`
+
+8.1 The command uses these templates automatically:
+
+- `5.1 Person Training - Certificate.oft`
+- `5.2 CP Training - Certificate.oft`
+
+8.2 It fills in the recipient email, attaches the generated PDF certificate, and sends the email directly to the trainee who has passed.
 
 ## What Is Automated
 
