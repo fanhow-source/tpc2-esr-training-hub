@@ -30,39 +30,36 @@ Most of the work is done from this menu. Use the Outlook templates only when the
 
 ## One-Time Python Setup
 
-If the automation reports that Python is not available, install it once as follows:
+Run this once on each computer before using the ESR AutoDoc tools.
 
-**1.** Open the official [Python Releases for Windows](https://www.python.org/downloads/windows/) page. Under a **Stable Release**, download **Windows installer (64-bit)**. Do not choose a pre-release, 32-bit, ARM64 or embeddable package.
+1. Open this folder:
 
-![Download the Windows 64-bit Python installer](assets/esr-python-setup-01-download-64bit.png)
-
-**2.** If HP Sure Click displays a protection message, first confirm that the file was downloaded from `python.org`, then select **Remove protection and open**.
-
-![Allow the official Python installer through HP Sure Click](assets/esr-python-setup-02-hp-sure-click.png)
-
-**3.** In the Python installer:
-   - Select **Add python.exe to PATH**. This is required.
-   - **Use admin privileges when installing py.exe** is normally optional for a current-user installation. Leave it unticked unless Windows or IT asks for administrator approval.
-
-![Select Add python.exe to PATH and install Python](assets/esr-python-setup-03-installer-options.png)
-
-**4.** Select **Install Now** and wait for Python installation to finish.
-
-**5.** Open Windows Search and type `cmd`.
-
-**6.** Select **Open** under **Command Prompt**. Administrator mode is not required.
-
-![Search for and open Command Prompt](assets/esr-python-setup-04-open-command-prompt.png)
-
-**7.** Copy and paste the following complete command into Command Prompt, press **Enter**, and wait until installation finishes:
-
-```cmd
-python -m pip install --user openpyxl pypdf reportlab pillow playwright
+```text
+OAIC Ltd\PROJECT_TWSHXESR - Documents\General\ESR AutoDoc Hub\04_ESR Training
 ```
 
-![Install all required Python packages in one command](assets/esr-python-setup-05-install-packages.png)
+2. Double-click:
 
-This single command installs all Python packages currently required by the AutoDoc tools. The other current automations do not need additional Python packages:
+```text
+Install ESR Automation Prerequisites.cmd
+```
+
+3. Wait until the black window shows:
+
+```text
+Python packages OK
+Done. ESR AutoDoc tools are ready on this computer.
+```
+
+This installer downloads a stable Python 3.13 release from `python.org`, installs it for the current Windows user, adds Python to PATH, and installs the required packages in one go:
+
+```text
+openpyxl pypdf reportlab pillow playwright
+```
+
+If HP Sure Click or Windows security asks, allow the installer to run after confirming it is from `python.org`.
+
+Current software requirements:
 
 | Automation | Required software |
 |---|---|
@@ -71,7 +68,7 @@ This single command installs all Python packages currently required by the AutoD
 | 3DLA Overview | Windows PowerShell and Microsoft Excel |
 | DPR | Windows PowerShell, Microsoft Word and Excel |
 
-**8.** Close Command Prompt and run `Run ESR Training Automation (English).cmd` again.
+If the installer fails, ask Charlie or IT to help run the same file again from the ESR Training folder.
 
 ## Before You Start
 

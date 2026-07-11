@@ -30,39 +30,36 @@ Run ESR Training Automation (English).cmd
 
 ## 首次使用：安裝 Python
 
-如果自動化程式顯示找不到 Python，只需依照以下步驟安裝一次：
+每台電腦只需要執行一次。
 
-**1.** 開啟 Python 官方的 [Windows 下載頁面](https://www.python.org/downloads/windows/)。在 **Stable Release** 下方下載 **Windows installer (64-bit)**。請勿選擇 Pre-release、32-bit、ARM64 或 embeddable package。
+1. 開啟這個資料夾：
 
-![下載 Windows 64-bit Python 安裝程式](assets/esr-python-setup-01-download-64bit.png)
-
-**2.** 如果 HP Sure Click 顯示防護訊息，先確認檔案是從 `python.org` 下載，再點選 **Remove protection and open**。
-
-![允許 HP Sure Click 開啟官方 Python 安裝程式](assets/esr-python-setup-02-hp-sure-click.png)
-
-**3.** 在 Python 安裝畫面：
-   - 務必勾選 **Add python.exe to PATH**。
-   - **Use admin privileges when installing py.exe** 對目前 Windows 使用者安裝通常不是必要項目。除非 Windows 或 IT 要求系統管理員授權，否則可不勾選。
-
-![勾選 Add python.exe to PATH 並安裝 Python](assets/esr-python-setup-03-installer-options.png)
-
-**4.** 點選 **Install Now**，等待 Python 安裝完成。
-
-**5.** 開啟 Windows 搜尋並輸入 `cmd`。
-
-**6.** 在 **Command Prompt** 下方點選 **Open**，不需要使用系統管理員模式。
-
-![搜尋並開啟 Command Prompt](assets/esr-python-setup-04-open-command-prompt.png)
-
-**7.** 複製以下完整指令，貼到 Command Prompt，按下 **Enter**，並等待套件安裝完成：
-
-```cmd
-python -m pip install --user openpyxl pypdf reportlab pillow playwright
+```text
+OAIC Ltd\PROJECT_TWSHXESR - Documents\General\ESR AutoDoc Hub\04_ESR Training
 ```
 
-![用一行指令安裝全部 Python 套件](assets/esr-python-setup-05-install-packages.png)
+2. 雙擊：
 
-這一行指令會一次安裝目前 AutoDoc 工具需要的所有 Python 套件。其他現有自動化不需要額外的 Python 套件：
+```text
+Install ESR Automation Prerequisites.cmd
+```
+
+3. 等黑色視窗顯示：
+
+```text
+Python packages OK
+Done. ESR AutoDoc tools are ready on this computer.
+```
+
+這個安裝檔會自動從 `python.org` 下載穩定版 Python 3.13、安裝到目前 Windows 使用者、加入 PATH，並一次安裝需要的套件：
+
+```text
+openpyxl pypdf reportlab pillow playwright
+```
+
+如果 HP Sure Click 或 Windows security 跳出提示，確認來源是 `python.org` 後允許執行。
+
+目前軟體需求：
 
 | 自動化工具 | 需要的軟體 |
 |---|---|
@@ -71,7 +68,7 @@ python -m pip install --user openpyxl pypdf reportlab pillow playwright
 | 3DLA Overview | Windows PowerShell 與 Microsoft Excel |
 | DPR | Windows PowerShell、Microsoft Word 與 Excel |
 
-**8.** 關閉 Command Prompt，再次執行 `Run ESR Training Automation (中文).cmd`。
+如果安裝失敗，請找 Charlie 或 IT 協助重新執行同一個安裝檔。
 
 ## 使用前準備
 
