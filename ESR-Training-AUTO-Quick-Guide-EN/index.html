@@ -1410,24 +1410,28 @@
 <p><img alt="ESR Training Automation English CLI menu" src="../assets/esr-training-cli-menu-en.png" /></p>
 <p>Most of the work is done from this menu. Use the Outlook templates only when the workflow below says so.</p>
 <h2 id="one-time-python-setup">One-Time Python Setup<a class="headerlink" href="#one-time-python-setup" title="Permanent link">&para;</a></h2>
-<p>If the automation reports that Python is not available, install it once as follows:</p>
-<p><strong>1.</strong> Open the official <a href="https://www.python.org/downloads/windows/">Python Releases for Windows</a> page. Under a <strong>Stable Release</strong>, download <strong>Windows installer (64-bit)</strong>. Do not choose a pre-release, 32-bit, ARM64 or embeddable package.</p>
-<p><img alt="Download the Windows 64-bit Python installer" src="../assets/esr-python-setup-01-download-64bit.png" /></p>
-<p><strong>2.</strong> If HP Sure Click displays a protection message, first confirm that the file was downloaded from <code>python.org</code>, then select <strong>Remove protection and open</strong>.</p>
-<p><img alt="Allow the official Python installer through HP Sure Click" src="../assets/esr-python-setup-02-hp-sure-click.png" /></p>
-<p><strong>3.</strong> In the Python installer:
-   - Select <strong>Add python.exe to PATH</strong>. This is required.
-   - <strong>Use admin privileges when installing py.exe</strong> is normally optional for a current-user installation. Leave it unticked unless Windows or IT asks for administrator approval.</p>
-<p><img alt="Select Add python.exe to PATH and install Python" src="../assets/esr-python-setup-03-installer-options.png" /></p>
-<p><strong>4.</strong> Select <strong>Install Now</strong> and wait for Python installation to finish.</p>
-<p><strong>5.</strong> Open Windows Search and type <code>cmd</code>.</p>
-<p><strong>6.</strong> Select <strong>Open</strong> under <strong>Command Prompt</strong>. Administrator mode is not required.</p>
-<p><img alt="Search for and open Command Prompt" src="../assets/esr-python-setup-04-open-command-prompt.png" /></p>
-<p><strong>7.</strong> Copy and paste the following complete command into Command Prompt, press <strong>Enter</strong>, and wait until installation finishes:</p>
-<div class="highlight"><pre><span></span><code>python -m pip install --user openpyxl pypdf reportlab pillow playwright
+<p>Run this once on each computer before using the ESR AutoDoc tools.</p>
+<ol>
+<li>Open this folder:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>OAIC Ltd\PROJECT_TWSHXESR - Documents\General\ESR AutoDoc Hub\04_ESR Training
 </code></pre></div>
-<p><img alt="Install all required Python packages in one command" src="../assets/esr-python-setup-05-install-packages.png" /></p>
-<p>This single command installs all Python packages currently required by the AutoDoc tools. The other current automations do not need additional Python packages:</p>
+<ol>
+<li>Double-click:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>Install ESR Automation Prerequisites.cmd
+</code></pre></div>
+<ol>
+<li>Wait until the black window shows:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>Python packages OK
+Done. ESR AutoDoc tools are ready on this computer.
+</code></pre></div>
+<p>This installer downloads a stable Python 3.13 release from <code>python.org</code>, installs it for the current Windows user, adds Python to PATH, and installs the required packages in one go:</p>
+<div class="highlight"><pre><span></span><code>openpyxl pypdf reportlab pillow playwright
+</code></pre></div>
+<p>If HP Sure Click or Windows security asks, allow the installer to run after confirming it is from <code>python.org</code>.</p>
+<p>Current software requirements:</p>
 <table>
 <thead>
 <tr>
@@ -1454,7 +1458,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>8.</strong> Close Command Prompt and run <code>Run ESR Training Automation (English).cmd</code> again.</p>
+<p>If the installer fails, ask Charlie or IT to help run the same file again from the ESR Training folder.</p>
 <h2 id="before-you-start">Before You Start<a class="headerlink" href="#before-you-start" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Use <code>Person _ CP Candidate Request.oft</code> when asking a contractor to provide the list of people who need Person or Competent Person training.</li>

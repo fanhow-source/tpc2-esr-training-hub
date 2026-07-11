@@ -1408,24 +1408,28 @@
 <p><img alt="ESR Training Automation 中文 CLI 選單" src="../assets/esr-training-cli-menu-zh.png" /></p>
 <p>主要操作都從這個選單執行。Outlook templates 只有在下面流程說需要使用時，才需要另外打開。</p>
 <h2 id="python">首次使用：安裝 Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
-<p>如果自動化程式顯示找不到 Python，只需依照以下步驟安裝一次：</p>
-<p><strong>1.</strong> 開啟 Python 官方的 <a href="https://www.python.org/downloads/windows/">Windows 下載頁面</a>。在 <strong>Stable Release</strong> 下方下載 <strong>Windows installer (64-bit)</strong>。請勿選擇 Pre-release、32-bit、ARM64 或 embeddable package。</p>
-<p><img alt="下載 Windows 64-bit Python 安裝程式" src="../assets/esr-python-setup-01-download-64bit.png" /></p>
-<p><strong>2.</strong> 如果 HP Sure Click 顯示防護訊息，先確認檔案是從 <code>python.org</code> 下載，再點選 <strong>Remove protection and open</strong>。</p>
-<p><img alt="允許 HP Sure Click 開啟官方 Python 安裝程式" src="../assets/esr-python-setup-02-hp-sure-click.png" /></p>
-<p><strong>3.</strong> 在 Python 安裝畫面：
-   - 務必勾選 <strong>Add python.exe to PATH</strong>。
-   - <strong>Use admin privileges when installing py.exe</strong> 對目前 Windows 使用者安裝通常不是必要項目。除非 Windows 或 IT 要求系統管理員授權，否則可不勾選。</p>
-<p><img alt="勾選 Add python.exe to PATH 並安裝 Python" src="../assets/esr-python-setup-03-installer-options.png" /></p>
-<p><strong>4.</strong> 點選 <strong>Install Now</strong>，等待 Python 安裝完成。</p>
-<p><strong>5.</strong> 開啟 Windows 搜尋並輸入 <code>cmd</code>。</p>
-<p><strong>6.</strong> 在 <strong>Command Prompt</strong> 下方點選 <strong>Open</strong>，不需要使用系統管理員模式。</p>
-<p><img alt="搜尋並開啟 Command Prompt" src="../assets/esr-python-setup-04-open-command-prompt.png" /></p>
-<p><strong>7.</strong> 複製以下完整指令，貼到 Command Prompt，按下 <strong>Enter</strong>，並等待套件安裝完成：</p>
-<div class="highlight"><pre><span></span><code>python -m pip install --user openpyxl pypdf reportlab pillow playwright
+<p>每台電腦只需要執行一次。</p>
+<ol>
+<li>開啟這個資料夾：</li>
+</ol>
+<div class="highlight"><pre><span></span><code>OAIC Ltd\PROJECT_TWSHXESR - Documents\General\ESR AutoDoc Hub\04_ESR Training
 </code></pre></div>
-<p><img alt="用一行指令安裝全部 Python 套件" src="../assets/esr-python-setup-05-install-packages.png" /></p>
-<p>這一行指令會一次安裝目前 AutoDoc 工具需要的所有 Python 套件。其他現有自動化不需要額外的 Python 套件：</p>
+<ol>
+<li>雙擊：</li>
+</ol>
+<div class="highlight"><pre><span></span><code>Install ESR Automation Prerequisites.cmd
+</code></pre></div>
+<ol>
+<li>等黑色視窗顯示：</li>
+</ol>
+<div class="highlight"><pre><span></span><code>Python packages OK
+Done. ESR AutoDoc tools are ready on this computer.
+</code></pre></div>
+<p>這個安裝檔會自動從 <code>python.org</code> 下載穩定版 Python 3.13、安裝到目前 Windows 使用者、加入 PATH，並一次安裝需要的套件：</p>
+<div class="highlight"><pre><span></span><code>openpyxl pypdf reportlab pillow playwright
+</code></pre></div>
+<p>如果 HP Sure Click 或 Windows security 跳出提示，確認來源是 <code>python.org</code> 後允許執行。</p>
+<p>目前軟體需求：</p>
 <table>
 <thead>
 <tr>
@@ -1452,7 +1456,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>8.</strong> 關閉 Command Prompt，再次執行 <code>Run ESR Training Automation (中文).cmd</code>。</p>
+<p>如果安裝失敗，請找 Charlie 或 IT 協助重新執行同一個安裝檔。</p>
 <h2 id="_2">使用前準備<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
 <li>如需請廠商提供 Person / Competent Person 名單，使用 <code>Person _ CP Candidate Request.oft</code> 範本寄信。</li>
