@@ -626,6 +626,61 @@ body {
   resize: vertical;
 }
 
+.oaic-feedback__form input[type="file"] {
+  color: var(--oaic-steel);
+  cursor: pointer;
+  font-size: 0.68rem;
+  padding: 0.35rem;
+}
+
+.oaic-feedback__form input[type="file"]::file-selector-button {
+  background: #eef5f6;
+  border: 0;
+  border-radius: 4px;
+  color: var(--oaic-primary);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  margin-right: 0.65rem;
+  min-height: 32px;
+  padding: 0.35rem 0.65rem;
+}
+
+.oaic-feedback__form input[type="file"]::file-selector-button:hover {
+  background: var(--oaic-sea);
+}
+
+.oaic-feedback__attachments {
+  border: 0;
+  margin: 0 0 0.9rem;
+  padding: 0;
+}
+
+.oaic-feedback__attachments legend {
+  color: var(--oaic-primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  margin-bottom: 0.45rem;
+  padding: 0;
+}
+
+.oaic-feedback__attachments legend small {
+  color: var(--oaic-steel);
+  font-size: 0.65rem;
+  font-weight: 500;
+}
+
+.oaic-feedback__attachments label {
+  margin-bottom: 0.55rem;
+}
+
+.oaic-feedback__attachment-note {
+  color: var(--oaic-steel);
+  display: block;
+  font-size: 0.61rem;
+  margin-top: 0.2rem;
+}
+
 .oaic-feedback__form input:focus,
 .oaic-feedback__form select:focus,
 .oaic-feedback__form textarea:focus {
