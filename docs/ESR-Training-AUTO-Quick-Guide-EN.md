@@ -115,6 +115,30 @@ OAIC Ltd\PROJECT_TWSHXESR - Documents\General\Safety Document - SFD Register\TWS
 
 The script writes candidate data into the `Old Training Register` sheet in that workbook.
 
+## Always Show the Bcc Field in Outlook
+
+Before using the ESR Training email templates, enable the Bcc field permanently in New Outlook. This ensures that the Bcc field is displayed automatically whenever a normal email or mail template is opened.
+
+1. In Outlook, select **File**
+2. Select **Settings**
+
+![Open Outlook Settings in New Outlook](assets/esr-training/outlook-settings-open.png)
+
+*Figure 1: Open Outlook Settings*
+
+3. Go to **Mail**
+4. Select **Compose**
+5. Under **Message format**, enable **Always show Bcc**
+6. Confirm that the correct email account is selected under **These settings apply to**
+7. Close the Settings window
+
+![Enable Always show Bcc in New Outlook Mail Compose settings](assets/esr-training/outlook-always-show-bcc.png)
+
+*Figure 2: Enable Always show Bcc under Mail > Compose*
+
+!!! note
+    This setting is applied separately to each email account. If another mailbox or shared account is used, select that account and enable **Always show Bcc** again.
+
 ## Workflow Map
 
 The picture below is the quickest way to understand the sequence.

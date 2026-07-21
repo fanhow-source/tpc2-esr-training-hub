@@ -2,6 +2,7 @@
 
 cd C:\Users\CharlieTseng\Desktop\tpc2-esr-training-hub
 python -m mkdocs serve
+python -m mkdocs build --clean
 
 本地確認 OK 後 Ctrl + C
 

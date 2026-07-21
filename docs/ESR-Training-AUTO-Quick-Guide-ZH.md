@@ -115,6 +115,30 @@ OAIC Ltd\PROJECT_TWSHXESR - Documents\General\Safety Document - SFD Register\TWS
 
 腳本會自動把候選人資料寫入這份 workbook 的 `Old Training Register` 工作頁。
 
+## 讓 Outlook 永久顯示 Bcc 欄位
+
+使用 ESR Training 電郵範本前，請先在 New Outlook 中設定永久顯示 Bcc 欄位。完成後，開啟一般郵件或郵件範本時，Bcc 欄位都會自動顯示。
+
+1. 在 Outlook 點選 **File**
+2. 選擇 **Settings**
+
+![在 New Outlook 開啟 Settings](assets/esr-training/outlook-settings-open.png)
+
+*Figure 1: Open Outlook Settings*
+
+3. 進入 **Mail**
+4. 選擇 **Compose**
+5. 在 **Message format** 下勾選 **Always show Bcc**
+6. 確認 **These settings apply to** 顯示的是正確的電郵帳號
+7. 關閉 Settings 視窗
+
+![在 New Outlook Mail Compose 設定中啟用 Always show Bcc](assets/esr-training/outlook-always-show-bcc.png)
+
+*Figure 2: Enable Always show Bcc under Mail > Compose*
+
+!!! note "注意"
+    此設定會依電郵帳號分別儲存。若使用其他帳號或共用信箱，請切換至該帳號後，再次啟用 **Always show Bcc**
+
 ## 流程對照表
 
 先看下面這張圖，最快理解整個順序。

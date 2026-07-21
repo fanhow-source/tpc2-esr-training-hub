@@ -167,6 +167,77 @@
   </div>
 </section>
 
+<section class="oaic-section oaic-feedback" id="feedback">
+  <div class="oaic-feedback__intro">
+    <p class="oaic-section__eyebrow">Improve this hub</p>
+    <h2>Suggest an improvement</h2>
+    <p>
+      Found an unclear step, outdated screenshot or missing instruction? Send the
+      details here and they will go directly to Charlie's OAIC inbox.
+    </p>
+    <p class="oaic-feedback__zh">
+      若教學內容不清楚、畫面已更新，或有步驟需要補充，歡迎直接留下修改建議。
+    </p>
+    <p class="oaic-feedback__privacy">
+      Do not include passwords, personal data or sensitive project information.
+    </p>
+  </div>
+
+  <form class="oaic-feedback__form" action="https://formsubmit.co/charlie.tseng@oaic.io" method="POST">
+    <input type="hidden" name="_subject" value="OAIC AutoDoc Hub - New improvement suggestion">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://fanhow-source.github.io/tpc2-esr-training-hub/feedback-thank-you/">
+    <input type="hidden" name="_url" value="https://fanhow-source.github.io/tpc2-esr-training-hub/">
+    <input class="oaic-feedback__honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
+
+    <div class="oaic-feedback__row">
+      <label>
+        <span>Name <small>姓名</small></span>
+        <input type="text" name="Name" autocomplete="name" required>
+      </label>
+      <label>
+        <span>OAIC email <small>公司信箱</small></span>
+        <input type="email" name="email" autocomplete="email" placeholder="name@oaic.io" required>
+      </label>
+    </div>
+
+    <div class="oaic-feedback__row">
+      <label>
+        <span>Guide / workflow <small>相關教學</small></span>
+        <select name="Workflow" required>
+          <option value="" selected disabled>Select a guide</option>
+          <option>Step 0 - SharePoint / OneDrive Setup</option>
+          <option>Step 1 - 3DLA Overview</option>
+          <option>Step 2 - 3DLA MoM</option>
+          <option>Step 3 - DPR</option>
+          <option>Step 4 - ESR Training</option>
+          <option>Website / General</option>
+        </select>
+      </label>
+      <label>
+        <span>Suggestion type <small>意見類型</small></span>
+        <select name="Suggestion type" required>
+          <option value="" selected disabled>Select a type</option>
+          <option>Incorrect or outdated information</option>
+          <option>Unclear instruction</option>
+          <option>Missing step or screenshot</option>
+          <option>Automation issue</option>
+          <option>New feature request</option>
+          <option>Other</option>
+        </select>
+      </label>
+    </div>
+
+    <label>
+      <span>Suggestion <small>修改建議</small></span>
+      <textarea name="Suggestion" rows="5" placeholder="Please describe what should be changed, where you found it, and your suggested wording or solution." required></textarea>
+    </label>
+
+    <button type="submit">Send suggestion</button>
+    <p class="oaic-feedback__service-note">Protected by FormSubmit and reCAPTCHA.</p>
+  </form>
+</section>
+
 <div class="oaic-note">
   <strong>Field note:</strong>
   If something does not run as expected, close the related Word or Excel files
