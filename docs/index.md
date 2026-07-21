@@ -264,6 +264,6 @@
 
 <div class="oaic-footer">
   <strong>OAIC Power System Solutions</strong><br>
-  Internal Documentation Portal · Version v0.5<br>
-  Maintained by Charlie Tseng · Last updated: 2026-07-08
+  Internal Documentation Portal · Version v0.6<br>
+  Maintained by Charlie Tseng · Last updated: 2026-07-21
 </div>
