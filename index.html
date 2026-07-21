@@ -1156,7 +1156,7 @@
     </p>
   </div>
 
-  <form class="oaic-feedback__form" action="https://formsubmit.co/charlie.tseng@oaic.io" method="POST">
+  <form class="oaic-feedback__form" action="https://formsubmit.co/charlie.tseng@oaic.io" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="_subject" value="OAIC AutoDoc Hub - New improvement suggestion">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_next" value="https://fanhow.github.io/tpc2-esr-training-hub/feedback-thank-you/">
@@ -1205,6 +1205,23 @@
       <span>Suggestion <small>修改建議</small></span>
       <textarea name="Suggestion" rows="5" placeholder="Please describe what should be changed, where you found it, and your suggested wording or solution." required></textarea>
     </label>
+
+    <fieldset class="oaic-feedback__attachments">
+      <legend>Attach screenshots or files <small>附加截圖或檔案（選填）</small></legend>
+      <label>
+        <span>Attachment 1 <small>附件 1</small></span>
+        <input type="file" name="attachment" accept=".png,.jpg,.jpeg,.pdf,.docx,.xlsx,image/png,image/jpeg,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+      </label>
+      <label>
+        <span>Attachment 2 <small>附件 2</small></span>
+        <input type="file" name="attachment_2" accept=".png,.jpg,.jpeg,.pdf,.docx,.xlsx,image/png,image/jpeg,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+      </label>
+      <label>
+        <span>Attachment 3 <small>附件 3</small></span>
+        <input type="file" name="attachment_3" accept=".png,.jpg,.jpeg,.pdf,.docx,.xlsx,image/png,image/jpeg,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+      </label>
+      <small class="oaic-feedback__attachment-note">PNG, JPG, PDF, DOCX or XLSX. Maximum 10 MB in total.</small>
+    </fieldset>
 
     <button type="submit">Send suggestion</button>
     <p class="oaic-feedback__service-note">Protected by FormSubmit and reCAPTCHA.</p>
