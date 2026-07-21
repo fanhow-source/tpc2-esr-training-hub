@@ -2,7 +2,7 @@
 
 $ErrorActionPreference = "Stop"
 
-$siteUrl = "https://fanhow-source.github.io/tpc2-esr-training-hub/"
+$siteUrl = "https://fanhow.github.io/tpc2-esr-training-hub/"
 $timestamp = Get-Date -Format "yyyyMMddHHmmss"
 
 Write-Host ""
