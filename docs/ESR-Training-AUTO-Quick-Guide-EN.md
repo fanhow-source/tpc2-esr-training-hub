@@ -1,315 +1,136 @@
-# ESR P/CP Training Automation - Quick Guide
+# ESR P/CP Training｜Follow in order
+
+<div class="oaic-status-pill">About 95% automated · Small bugs are fixed as found</div>
+
+<div class="oaic-launch-card">
+  <span aria-hidden="true">▶️</span>
+  <div>
+    <strong>Always start here</strong>
+    <code>Run ESR Training Automation (English).cmd</code>
+  </div>
+</div>
+
+![ESR Training Automation English CLI menu](assets/esr-training-cli-menu-en-current.png){ .oaic-step-shot }
+
+!!! danger "These commands send real emails"
+    Commands `3` and `7` send immediately. Check people and email addresses first.
+
+![ESR Training template and CLI command flow](assets/esr-training-template-command-flow.png){ .oaic-step-shot }
+
+## Daily workflow
+
+<div class="oaic-visual-steps" markdown>
+
+<section class="oaic-visual-step oaic-visual-step--with-shot">
+  <div class="oaic-visual-step__number">1</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">📨</div>
+  <div>
+    <h2>Get the candidate list</h2>
+    <p>Send <code>1. Person _ CP Candidate Request.oft</code></p>
+    <p>Received Excel → place in <code>01_Inbox\P_CP Candidate Lists</code></p>
+  </div>
+</section>
+
+![Numbered Training email templates](assets/esr-training-email-templates-numbered.png){ .oaic-step-shot }
+
+<section class="oaic-visual-step oaic-visual-step--with-shot">
+  <div class="oaic-visual-step__number">2</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">📥</div>
+  <div>
+    <h2>CLI → Command 1</h2>
+    <p><strong>Import contractor P/CP candidate list</strong></p>
+    <p>If <code>COPY TO TEMPLATE 2</code> appears: copy names → paste into Template 2 → send to contractor.</p>
+  </div>
+</section>
+
+![Copy valid candidates from the CLI](assets/esr-training-step1-copy-template2-lines.png){ .oaic-step-shot }
+
+![Paste valid candidates into email Template 2](assets/esr-training-template2-validity-confirmation.png){ .oaic-step-shot }
+
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">3</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">🌐</div>
+  <div>
+    <h2>CLI → Command 2</h2>
+    <p><strong>Add SharePoint Site access</strong></p>
+    <p>Do not use the mouse or keyboard while it runs.</p>
+  </div>
+</section>
+
+<section class="oaic-visual-step oaic-visual-step--danger">
+  <div class="oaic-visual-step__number">4</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">✉️</div>
+  <div>
+    <h2>CLI → Command 3</h2>
+    <p><strong>Send Training invitations</strong></p>
+    <p>Check white rows → run → emails send immediately.</p>
+  </div>
+</section>
+
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">5</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">🔎</div>
+  <div>
+    <h2>CLI → Command 4, then Command 5</h2>
+    <p><strong>Scan pending people → check Training Hub results</strong></p>
+    <p>Person ≥ 36; CP Module 1 and 2 each ≥ 20.</p>
+  </div>
+</section>
+
+![Run Command 5 and check the P/CP training results](assets/esr-training/command5-results.png){ .oaic-step-shot .oaic-step-shot--tall loading=lazy }
+
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">6</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">📜</div>
+  <div>
+    <h2>CLI → Command 6</h2>
+    <p><strong>Create PDF certificates for PASSED people</strong></p>
+    <p>Check <code>04_Certificates</code></p>
+  </div>
+</section>
+
+![Find the generated Person and Competent Person certificates](assets/esr-training/certificate-output.png){ .oaic-step-shot .oaic-step-shot--tall loading=lazy }
+
+<section class="oaic-visual-step oaic-visual-step--danger">
+  <div class="oaic-visual-step__number">7</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">📤</div>
+  <div>
+    <h2>CLI → Command 7</h2>
+    <p><strong>Send Certificate emails</strong></p>
+    <p>Check email and PDF → run → emails send immediately.</p>
+  </div>
+</section>
 
-The ESR P/CP Training workflow is now around **95% automated** and ready for day-to-day use. A few small bugs may still appear as Outlook or SharePoint changes; these will be fixed as they are found.
+</div>
 
-Main folder:
+<details class="oaic-compact-details" markdown>
+<summary>First use: Python + Outlook Bcc</summary>
 
-```text
-OAIC Ltd\PROJECT_TWSHXESR - Documents\General\ESR AutoDoc Hub\04_ESR Training
-```
+1. Double-click `Install ESR Automation Prerequisites.cmd`
+2. Wait for `Python packages OK`
+3. Outlook: **File → Settings**
 
-Double-click:
+![Open Outlook Settings](assets/esr-training/outlook-settings-open.png){ .oaic-step-shot }
 
-```text
-Run ESR Training Automation (English).cmd
-```
+4. **Mail → Compose → Always show Bcc**
 
-or use the Chinese launcher:
+![Enable Always show Bcc](assets/esr-training/outlook-always-show-bcc.png){ .oaic-step-shot }
 
-```text
-Run ESR Training Automation (中文).cmd
-```
+</details>
 
-## What You Will See
+<details class="oaic-compact-details" markdown>
+<summary>Important rules and folders</summary>
 
-After opening the launcher, you should see this CLI menu. Type the command number and press **Enter**.
+- Formal Register: `Safety Document - SFD Register\TWSHXHV_ESR_OverallRegister.xlsm`
+- Worksheet written by the tool: `Old Training Register`
+- Existing training validity: 730 days; less than 30 days shows `EXPIRING SOON`
+- Current Training Hub attempt: results from only the latest about 6 months
+- Email templates: `00_Template\Training email Templates`
+- Training results: `02_Processing`
+- Certificates: `04_Certificates`
+- Retraining email: `4. Person _ CP Re-training Required.oft`
 
-![ESR Training Automation English CLI menu](assets/esr-training-cli-menu-en.png)
+</details>
 
-Most of the work is done from this menu. Use the Outlook templates only when the workflow below says so.
-
-## One-Time Python Setup
-
-Run this once on each computer before using the ESR AutoDoc tools.
-
-1. Open this folder:
-
-```text
-OAIC Ltd\PROJECT_TWSHXESR - Documents\General\ESR AutoDoc Hub\04_ESR Training
-```
-
-2. Double-click:
-
-```text
-Install ESR Automation Prerequisites.cmd
-```
-
-3. Wait until the black window shows:
-
-```text
-Python packages OK
-Done. ESR AutoDoc tools are ready on this computer.
-```
-
-This installer downloads a stable Python 3.13 release from `python.org`, installs it for the current Windows user, adds Python to PATH, and installs the required packages in one go:
-
-```text
-openpyxl pypdf reportlab pillow playwright
-```
-
-If HP Sure Click or Windows security asks, allow the installer to run after confirming it is from `python.org`.
-
-Current software requirements:
-
-| Automation | Required software |
-|---|---|
-| ESR Training | Python 3 and the packages listed above |
-| 3DLA MoM | Windows PowerShell, Microsoft Word and Excel |
-| 3DLA Overview | Windows PowerShell and Microsoft Excel |
-| DPR | Windows PowerShell, Microsoft Word and Excel |
-
-If the installer fails, ask Charlie or IT to help run the same file again from the ESR Training folder.
-
-## Before You Start
-
-1. Use `Person _ CP Candidate Request.oft` when asking a contractor to provide the list of people who need Person or Competent Person training.
-2. When the contractor returns the completed register, save it here:
-
-```text
-04_ESR Training\01_Inbox\P_CP Candidate Lists
-```
-
-The file name should normally follow this pattern:
-
-```text
-TPC2_ESR_P_CP_Training_Register_[Company Name].xlsx
-```
-
-3. Close related Excel files and Outlook draft windows before running the tool.
-
-## Key Locations
-
-Email templates:
-
-```text
-04_ESR Training\00_Template\Training email Templates
-```
-
-Training result Excel files:
-
-```text
-04_ESR Training\02_Processing
-```
-
-Generated certificates:
-
-```text
-04_ESR Training\04_Certificates
-```
-
-The official register is not moved into the AutoDoc Hub. It stays here:
-
-```text
-OAIC Ltd\PROJECT_TWSHXESR - Documents\General\Safety Document - SFD Register\TWSHXHV_ESR_OverallRegister.xlsm
-```
-
-The script writes candidate data into the `Old Training Register` sheet in that workbook.
-
-## Always Show the Bcc Field in Outlook
-
-Before using the ESR Training email templates, enable the Bcc field permanently in New Outlook. This ensures that the Bcc field is displayed automatically whenever a normal email or mail template is opened.
-
-1. In Outlook, select **File**
-2. Select **Settings**
-
-![Open Outlook Settings in New Outlook](assets/esr-training/outlook-settings-open.png)
-
-*Figure 1: Open Outlook Settings*
-
-3. Go to **Mail**
-4. Select **Compose**
-5. Under **Message format**, enable **Always show Bcc**
-6. Confirm that the correct email account is selected under **These settings apply to**
-7. Close the Settings window
-
-![Enable Always show Bcc in New Outlook Mail Compose settings](assets/esr-training/outlook-always-show-bcc.png)
-
-*Figure 2: Enable Always show Bcc under Mail > Compose*
-
-!!! note
-    This setting is applied separately to each email account. If another mailbox or shared account is used, select that account and enable **Always show Bcc** again.
-
-## Workflow Map
-
-The picture below is the quickest way to understand the sequence.
-
-![ESR Training template and CLI command flow](assets/esr-training-template-command-flow.png)
-
-Use this table to see when to use an Outlook template and when to run a command in the CLI.
-
-| Stage | Email template | CLI command |
-|---|---|---|
-| Ask contractor for P/CP candidates | `1. Person _ CP Candidate Request.oft` | None |
-| Import returned candidate list | None | `1. Import contractor candidate lists` |
-| Confirm existing valid / possible matches | `2. ESR Training - Candidate Validity Confirmation.oft` | Use only if the Step 1 summary needs contractor confirmation |
-| Add Training Hub Site access | None | `2. Add pending trainees to SharePoint Site access` |
-| Send training invitations | `3.1 Person Training invitation.oft` / `3.2 CP Training invitation.oft` | `3. Send training invitation emails` |
-| Wait for trainees to complete training | None | No command; allow time for results to appear |
-| Check pending trainees | None | `4. Scan pending white-background entries` |
-| Check results | Optional: `4. Person _ CP Re-training Required.oft` if a retake notice is needed | `5. Check Training Hub result status` |
-| Generate certificates | None | `6. Generate PDF certificates for PASSED trainees` |
-| Send certificates | `5.1 Person Training - Certificate.oft` / `5.2 CP Training - Certificate.oft` | `7. Send Outlook certificate emails` |
-
-## Step-by-Step Workflow
-
-### 1. Ask the contractor for the P/CP candidate list
-
-**Use email template:** `1. Person _ CP Candidate Request.oft`
-
-1.1 Send this template to the contractor and ask them to complete the P/CP candidate list.
-
-1.2 When the contractor returns the completed file, save it in:
-
-```text
-04_ESR Training\01_Inbox\P_CP Candidate Lists
-```
-
-### 2. Import the returned candidate list
-
-**Run CLI command:** `1. Import contractor candidate lists`
-
-This is the command window option to use:
-
-![ESR Training command window](assets/esr-training-cli-menu-en-current.png)
-
-2.1 The command reads contractor files from `01_Inbox\P_CP Candidate Lists`.
-
-2.2 Before importing anyone, it checks the official `Old Training Register`:
-
-- ESR Training records are valid for `730 days` from the training result date.
-- Email is matched first.
-- If email is not available, full name is checked.
-- Name-only matches are shown as possible matches and are not silently skipped.
-- If a valid record is found, the person is not imported as a pending white-background trainee.
-- If fewer than `30 days` remain, the record is marked `EXPIRING SOON`.
-
-2.3 The command summary shows:
-
-- existing valid records found,
-- new or expired personnel imported,
-- possible matches requiring manual confirmation.
-
-2.4 If someone already has valid ESR Training, the black command window will show a section like:
-
-```text
-COPY TO TEMPLATE 2 - Candidate Validity Confirmation
-```
-
-Copy the names shown under that heading. These are the people who have already passed and do not need to complete training again at this stage.
-
-![Copy the validity confirmation lines from the command window](assets/esr-training-step1-copy-template2-lines.png)
-
-2.5 Open the email templates folder and use the second template:
-
-```text
-2. ESR Training - Candidate Validity Confirmation.oft
-```
-
-![Training email templates with numbering](assets/esr-training-email-templates-numbered.png)
-
-2.6 Paste the copied names into the highlighted part of the email body, then send it to the contractor contact person.
-
-![Paste the copied names into template 2](assets/esr-training-template2-validity-confirmation.png)
-
-2.7 Step 1 does not send emails. It only imports required trainees and prepares a clear summary.
-
-### 3. Add trainees to SharePoint Site access
-
-**Run CLI command:** `2. Add pending trainees to SharePoint Site access`
-
-3.1 The command opens the Training Hub and adds pending white-background trainees to Site access.
-
-3.2 Do not use the mouse or keyboard while this is running. Grab a tea, take a quick break, and let it finish.
-
-### 4. Send training invitation emails
-
-**Run CLI command:** `3. Send training invitation emails`
-
-4.1 The command uses these templates automatically:
-
-- `3.1 Person Training invitation.oft`
-- `3.2 CP Training invitation.oft`
-
-4.2 Person and CP recipients are added to BCC and the emails are sent automatically.
-
-4.3 Check the pending white-background list before running this command, because it really sends the emails.
-
-### 5. Check who is still pending
-
-**Run CLI command:** `4. Scan pending white-background entries`
-
-5.1 This shows the trainees still waiting in the white-background pending list.
-
-5.2 Use this after invitations have been sent, or while waiting for people to complete the training.
-
-### 6. Check Training Hub result status
-
-**Run CLI command:** `5. Check Training Hub result status`
-
-6.1 The command searches the Training Hub result workbooks in `02_Processing`.
-
-6.2 Passing score:
-
-- Person: `>= 36`
-- CP: Module 1 and Module 2 must both be `>= 20`
-
-6.3 For Training Hub result workbooks, only results within roughly the last 6 months are treated as the current attempt. This prevents last year's result from being mistaken as the new attempt.
-
-6.4 This is separate from the Step 1 certificate validity check. Step 1 checks whether an existing record in the official register is still valid within `730 days`.
-
-6.5 If someone needs to be asked to retake the training, use:
-
-```text
-4. Person _ CP Re-training Required.oft
-```
-
-### 7. Generate PDF certificates
-
-**Run CLI command:** `6. Generate PDF certificates for PASSED trainees`
-
-7.1 The command creates non-editable image-style PDF certificates only for trainees with a valid `PASSED` result.
-
-7.2 Certificates are saved in:
-
-```text
-04_Certificates\Person
-04_Certificates\Competent Person
-```
-
-### 8. Send certificate emails
-
-**Run CLI command:** `7. Send Outlook certificate emails`
-
-8.1 The command uses these templates automatically:
-
-- `5.1 Person Training - Certificate.oft`
-- `5.2 CP Training - Certificate.oft`
-
-8.2 It fills in the recipient email, attaches the generated PDF certificate, and sends the email directly to the trainee who has passed.
-
-## What Is Automated
-
-- No manual key-in of trainee details.
-- No manual SharePoint Site access entry.
-- No manual training invitation email preparation.
-- No manual pass/fail checking; the result and passed date are shown on screen.
-- No manual ESR certificate preparation.
-- No manual certificate attachment and email preparation.
-
-## Notes
-
-- Close related Excel files and Outlook drafts before running the tool.
-- Please leave the mouse and keyboard alone while SharePoint or Outlook automation is running.
-- If someone passed before but the result is older than 6 months, the tool will not use that old result as the current pass.
-- If Outlook or SharePoint gets stuck, close the related windows and run that step again.
-- The tool is now close to fully automated, but small bugs may still appear when Microsoft updates Outlook or SharePoint.
+!!! tip "Stuck?"
+    Close related Excel / Outlook windows, then run the same command again.

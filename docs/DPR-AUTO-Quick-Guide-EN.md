@@ -1,44 +1,66 @@
-# DPR Automation - Quick Guide
+# DPR｜5 steps
 
-Hi everyone, to make the daily DPR a little easier, we have added some automation to the new DPR format.
+<div class="oaic-visual-steps" markdown>
 
-The idea is to reduce repeated manual work, so we can spend more time checking the actual content.
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">1</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">❌</div>
+  <div>
+    <h2>Close every Word window</h2>
+  </div>
+</section>
 
-## How To Use
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">2</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">🖱️</div>
+  <div>
+    <h2>Double-click the .cmd file in DPR</h2>
+    <code>Close Word First - Generate Tomorrow DPR.cmd</code>
+  </div>
+</section>
 
-1. Please close all Word windows first.
-2. In the DPR folder, run `Close Word First - Generate Tomorrow DPR.cmd`.
-3. The programme will generate tomorrow's DPR automatically.
-4. When opening the new DPR, please click `Enable Content`.
-5. You can then fill in the report, paste photos, and review the content.
-6. Before closing, please press `Ctrl + S` to save manually.
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">3</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">⏱️</div>
+  <div>
+    <h2>Wait about 1 minute</h2>
+    <p>The CMD window may stay open while it works.</p>
+  </div>
+</section>
 
-## What The Automation Does
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">4</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">🔓</div>
+  <div>
+    <h2>Open the new DPR → Enable Content</h2>
+  </div>
+</section>
 
-- Copies the latest DPR and creates tomorrow's report.
-- Updates the file name, Doc No., Report Date, and footer.
-- Imports activities from the 3DLA Overview:
-  - Today's activities go to `A. High Level Activities (past 24hrs)`.
-  - Tomorrow's activities go to `A. Next 24 Hours`.
-- Adds Equipment before the Activity where it helps make the description clearer.
-- Skips Equipment if it is blank, `TBC`, or `TBD`.
-- Avoids repeated wording, for example `IACs` + `IAC pull-in` becomes `IAC pull-in`.
-- Clears old photos and photo descriptions, then resets `#1` to `#8`.
-- Keeps 8 photo slots, arranged as `OSS Pictures` and `TJB Pictures`.
-- After pasting photos, press `Fit Pictures` to resize them into the cells.
-- Resets `Toolbox Meeting - Today` to `0`; once entered:
-  - `Permit to Work - Today` follows the same value.
-  - Both Totals are updated automatically.
-- Clears only the Description in `B. Remarks`, while keeping `001`.
-- Helps align the `Teams offshore` time entries:
-  - For middle rows, mainly fill in `Time To`.
-  - The next row's `Time From` will follow.
-  - The first and last rows can both be edited manually.
+![Run DPR automation and enable Word content](assets/dpr/run-and-enable-content.png){ .oaic-step-shot .oaic-step-shot--tall loading=lazy }
 
-## Small Reminders
+<section class="oaic-visual-step oaic-visual-step--check">
+  <div class="oaic-visual-step__number">5</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">💾</div>
+  <div>
+    <h2>Fill in → Fit Pictures → Ctrl + S</h2>
+    <p><strong>Date · Activities · Photos · Teams offshore</strong></p>
+  </div>
+</section>
 
-- Because the DPR automation now checks quite a few rules, including dates, activities, photo pages, macros, page layout, and fields, it may take around 1 minute to generate the new report. If the CMD window stays open for a little while, please just give it a moment; this is normal.
-- If rows are added or deleted in `Teams offshore`, please take a quick look at the nearby times.
-- This is a `.docm` file because macros are needed for the automation. Word does not allow AutoSave for this file type.
-- A quick `Ctrl + S` before closing would be perfect.
-- If the DPR generation fails, please close Word completely and run it again.
+![Complete DPR workflow](assets/dpr/full-workflow.png){ .oaic-step-shot .oaic-step-shot--tall loading=lazy }
+
+</div>
+
+!!! warning "DPR is a .docm file"
+    Word AutoSave is not supported. Press `Ctrl + S` before closing.
+
+<details class="oaic-compact-details" markdown>
+<summary>What the tool does automatically</summary>
+
+- Updates file name, Doc No., Report Date and footer
+- Imports past / next 24hrs activities from 3DLA Overview
+- Clears old photos and resets #1–#8
+- Keeps 8 OSS / TJB picture slots
+- Updates Toolbox Meeting / PTW totals
+
+</details>

@@ -1,35 +1,57 @@
-# 3DLA Overview Automation - Quick Guide
+# 3DLA Overview｜4 steps
 
-Hi everyone, we have added a small helper for the 3DLA Overview report.
+<div class="oaic-visual-steps" markdown>
 
-The aim is simple: less copying, fewer manual row adjustments, and a little more time to check the actual work content.
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">1</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">❌</div>
+  <div>
+    <h2>Close the latest Overview Excel</h2>
+  </div>
+</section>
 
-## How To Use
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">2</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">🖱️</div>
+  <div>
+    <h2>Double-click the .cmd file</h2>
+    <code>Close Excel First - Generate Tomorrow 3DLA.cmd</code>
+  </div>
+</section>
 
-1. Please close the current 3DLA Excel file first.
-2. In the 3DLA Overview folder, run `Close Excel First - Generate Tomorrow 3DLA.cmd`.
-3. The programme will find the latest 3DLA Overview file in the same folder.
-4. It will then generate the next day's report automatically.
-5. Open the new file and review the contents before issuing it.
+![Open the Overview folder and run the command](assets/3dla-overview/run-command.png){ .oaic-step-shot .oaic-step-shot--tall loading=lazy }
 
-## What The Automation Does
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">3</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">⏳</div>
+  <div>
+    <h2>Wait until it finishes</h2>
+    <p>The new file appears in the same folder.</p>
+  </div>
+</section>
 
-- Finds the latest file named like `OWP2-ESR-3DLA-Overview-YYYYMMDD.xlsx`.
-- Creates the next day's file with the correct date in the file name.
-- Updates the yellow `DATE TODAY` cell.
-- Moves the existing look-ahead activities forward by date.
-- Keeps the date formulas working in the schedule area.
-- Adds or removes rows when the number of activities changes.
-- Keeps the alternating grey and white day sections.
-- For the final look-ahead day, copies the latest available activity plan if the new day is still too far ahead to forecast.
-- Keeps the `Simops` and `Remarks` sections below the schedule.
+<section class="oaic-visual-step oaic-visual-step--check">
+  <div class="oaic-visual-step__number">4</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">🔎</div>
+  <div>
+    <h2>Open → Check → Issue</h2>
+    <p><strong>Date · Activities · Simops · Remarks</strong></p>
+  </div>
+</section>
 
-## Small Reminders
+![Check the generated 3DLA Overview](assets/3dla-overview/check-result.png){ .oaic-step-shot .oaic-step-shot--tall loading=lazy }
 
-- Please close the latest 3DLA Excel file before running the `.cmd` file.
-- Please run the `.cmd` file, not the `.ps1` file.
-- The `.ps1` file is only the background code and needs to stay in the same folder.
-- The tool works from the folder it is placed in, so it should work for different users without changing the Windows user name path.
-- If an error appears, please close Excel completely and run the `.cmd` file again.
+</div>
 
-Thanks everyone. Hopefully this saves a few minutes each day and keeps the report preparation a bit calmer.
+!!! tip "Error?"
+    Close every Excel window, then run the `.cmd` file again.
+
+<details class="oaic-compact-details" markdown>
+<summary>What the tool does automatically</summary>
+
+- Creates tomorrow's file and updates the date
+- Moves look-ahead activities forward
+- Adjusts rows and colours
+- Keeps Simops / Remarks
+
+</details>

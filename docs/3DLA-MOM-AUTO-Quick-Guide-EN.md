@@ -1,84 +1,71 @@
-# 3DLA MoM Automation - Quick Guide
+# 3DLA MoM｜5 steps
 
-Hi everyone, this quick guide is for colleagues who generate the daily ESR 3DLA MoM.
+<div class="oaic-path-chip">📊 Finish Overview → 📝 Generate MoM</div>
 
-The automation creates the next day's MoM Word file and inserts the matching 3DLA Overview Excel into Attachment A. The goal is to reduce repeated formatting work, so we can spend more time checking the actual content, ESR status, SIMOPS, and interfaces.
+<div class="oaic-visual-steps" markdown>
 
-## Please Check Which Folder You Are Using
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">1</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">💾</div>
+  <div>
+    <h2>Finish and save tomorrow's Overview</h2>
+  </div>
+</section>
 
-Please use the synced OAIC Ltd project folders below.
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">2</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">❌</div>
+  <div>
+    <h2>Close every Word window</h2>
+  </div>
+</section>
 
-| Folder | Path |
-| --- | --- |
-| MoM | `OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM` |
-| Overview | `OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview` |
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">3</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">🖱️</div>
+  <div>
+    <h2>Double-click the .cmd file in MoM</h2>
+    <code>Close Word First - Generate Tomorrow 3DLA MoM.cmd</code>
+  </div>
+</section>
 
-Small reminder: run the `.cmd` from the MoM folder. The script will first look for `..\Overview` next to that MoM folder.
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">4</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">📄</div>
+  <div>
+    <h2>Open the new Word file</h2>
+  </div>
+</section>
 
-## Before You Start
+<section class="oaic-visual-step oaic-visual-step--check">
+  <div class="oaic-visual-step__number">5</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">🔎</div>
+  <div>
+    <h2>Check 4 places</h2>
+    <p><strong>Date · Meeting no. · Attachment A · Attachment B</strong></p>
+  </div>
+</section>
 
-- Complete and save the target day's `3DLA Overview` Excel.
-- The Overview Excel file name should look like:
-  `OWP2-ESR-3DLA-Overview-20260706.xlsx`
-- Close Word first, so the Word file is not locked.
-- If the Overview Excel is open, please save it before running the tool.
+</div>
 
-## Daily Use
+![Complete 3DLA MoM workflow](assets/3dla-mom/full-workflow.png){ .oaic-step-shot .oaic-step-shot--tall loading=lazy }
 
-1. Complete and save tomorrow's Overview Excel.
-2. Close all Word windows.
-3. Go to the MoM folder you are using.
-4. Double-click:
-   `Close Word First - Generate Tomorrow 3DLA MoM.cmd`
-5. The tool will generate tomorrow's MoM Word file automatically.
-6. After opening the new Word file, please quickly check:
-   - Date
-   - Meeting no.
-   - `5. Attachments - A. 3DLA Overview`
-   - `B. HV System Overview`
-7. After checking, continue with meeting notes or PDF export as usual.
+!!! warning "A MoM for the same date already exists"
+    The tool stops without overwriting. Use `-Overwrite` only when you are sure.
 
-## What The Automation Does
+<details class="oaic-compact-details" markdown>
+<summary>Folder locations</summary>
 
-- Finds a suitable previous MoM Word file to use as the template.
-- Creates the new Word file using the correct date-based name, for example:
-  `OWP2-ESR-3DLA-MOM-260706-01.docx`
-- Updates the Word header fields:
-  - Date
-  - Meeting no.
-- Finds the matching Overview Excel for the target date.
-- Captures the 3DLA Overview from the Excel `EN` worksheet.
-- Uses only the range that contains visible text or values, so empty rows below the table are not pasted into Word.
-- Converts the Overview into an image and inserts it into:
-  `5. Attachments - A. 3DLA Overview`
-- Trims unnecessary white space around the image so it fits the page width and stays readable.
-- Keeps the original Word layout, tables, and other attachment content.
-- Does not overwrite an existing file by default, to avoid replacing a version already edited by someone.
+- MoM: `OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\MoM`
+- Overview: `OAIC Ltd\PROJECT_TWSHXESR - Documents\General\3-Day Look Ahead - 3DLA\Overview`
 
-## If The Same Date MoM Already Exists
+</details>
 
-The tool will stop by default. It will not overwrite the file automatically.
-
-If you are sure you want to regenerate it, run this in PowerShell:
+<details class="oaic-compact-details" markdown>
+<summary>Regenerate the same date</summary>
 
 ```powershell
 powershell -Sta -NoProfile -ExecutionPolicy Bypass -File "Generate Tomorrow 3DLA MoM - Code.ps1" -TargetDate "2026-07-06" -Overwrite -Open
 ```
 
-Please change the date to the report date you need.
-
-## Common Situations
-
-| Situation | What To Do |
-| --- | --- |
-| The tool says Word is still open | Close all Word windows and run it again |
-| The Overview Excel cannot be found | Check that the correct `..\Overview` folder exists next to your MoM folder |
-| Attachment A does not look right | Check the Overview Excel content, row heights, and print layout, then regenerate |
-| The same date MoM already exists | Use `-Overwrite` only if you are sure you want to rebuild it |
-| The Word still needs manual edits | That is normal. The tool prepares the draft; final review is still manual |
-
-## Gentle Reminders
-
-- This tool prepares the draft. It does not replace the final human check.
-- If the Overview has many activities, please open the Word file and check that the image is still readable.
-- Saving a few minutes on repeated formatting gives us a little more space to focus on ESR, SIMOPS, and interface checks.
+</details>

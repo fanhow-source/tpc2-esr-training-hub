@@ -23,10 +23,10 @@ extra_css:
   - stylesheets/extra.css
 
 nav:
+  - Home: index.md
   - Step 0 Setup:
       - English: Step-0-SharePoint-OneDrive-Setup-EN.md
       - 中文: Step-0-SharePoint-OneDrive-Setup-ZH.md
-  - Home: index.md
   - 3DLA Overview:
       - English: 3DLA-Overview-AUTO-Quick-Guide-EN.md
       - 中文: 3DLA-Overview-AUTO-Quick-Guide-ZH.md

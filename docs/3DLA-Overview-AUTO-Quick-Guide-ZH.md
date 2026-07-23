@@ -1,35 +1,57 @@
-# 3DLA Overview 自動化 - 快速指南
+# 3DLA Overview｜4 步完成
 
-大家好，我們在 3DLA Overview 資料夾裡加了一個小工具。
+<div class="oaic-visual-steps" markdown>
 
-目的很單純：少一點複製貼上、少一點手動調整列數，把時間留給真正需要確認的工項內容。
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">1</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">❌</div>
+  <div>
+    <h2>關閉最新的 Overview Excel</h2>
+  </div>
+</section>
 
-## 如何使用
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">2</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">🖱️</div>
+  <div>
+    <h2>雙擊 .cmd</h2>
+    <code>Close Excel First - Generate Tomorrow 3DLA.cmd</code>
+  </div>
+</section>
 
-1. 請先關閉目前最新的 3DLA Excel 檔案。
-2. 在 3DLA Overview 資料夾裡，執行 `Close Excel First - Generate Tomorrow 3DLA.cmd`。
-3. 程式會自動找到同一個資料夾裡最新的 3DLA Overview 檔案。
-4. 接著自動產生隔一天的報告。
-5. 打開新產生的檔案後，請再確認內容是否正確，再發出去。
+![Open the Overview folder and run the command](assets/3dla-overview/run-command.png){ .oaic-step-shot .oaic-step-shot--tall loading=lazy }
 
-## 自動化會幫你做什麼
+<section class="oaic-visual-step">
+  <div class="oaic-visual-step__number">3</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">⏳</div>
+  <div>
+    <h2>等待程式完成</h2>
+    <p>新檔案會自動出現在同一個資料夾。</p>
+  </div>
+</section>
 
-- 自動尋找最新的 `OWP2-ESR-3DLA-Overview-YYYYMMDD.xlsx` 檔案。
-- 自動產生隔一天的新檔案，並更新檔名日期。
-- 自動更新黃色的 `DATE TODAY` 日期欄位。
-- 依照日期把原本的 look-ahead 工項往前帶。
-- 維持排程區的日期公式。
-- 如果每天的工項列數不同，會自動新增或刪除列。
-- 維持每天區塊灰色、白色交錯的底色。
-- 最後一天如果仍然太遠、還無法預估當天工項，會自動沿用目前最後一天的工項內容。
-- 保留排程下方的 `Simops` 和 `Remarks` 區塊位置。
+<section class="oaic-visual-step oaic-visual-step--check">
+  <div class="oaic-visual-step__number">4</div>
+  <div class="oaic-visual-step__icon" aria-hidden="true">🔎</div>
+  <div>
+    <h2>打開新檔 → 檢查 → 發出</h2>
+    <p><strong>Date · Activities · Simops · Remarks</strong></p>
+  </div>
+</section>
 
-## 小提醒
+![Check the generated 3DLA Overview](assets/3dla-overview/check-result.png){ .oaic-step-shot .oaic-step-shot--tall loading=lazy }
 
-- 執行前請先關掉最新那份 3DLA Excel 檔案。
-- 請執行 `.cmd` 檔，不需要點 `.ps1` 檔。
-- `.ps1` 是幕後程式碼，需要和 `.cmd` 放在同一個資料夾。
-- 這個工具會用它所在的資料夾來找報告，所以不同同事的電腦使用者名稱不同也沒關係。
-- 如果出現錯誤，通常先把 Excel 完全關閉，再重新執行 `.cmd` 就可以。
+</div>
 
-謝謝大家。希望這個小工具可以讓每天準備報告的流程輕鬆一點，也少一點重複手動調整。
+!!! tip "出現錯誤？"
+    關閉所有 Excel 視窗，再雙擊 `.cmd`。
+
+<details class="oaic-compact-details" markdown>
+<summary>程式自動完成的內容</summary>
+
+- 產生明日檔案並更新日期
+- 將 look-ahead activities 往前帶
+- 自動調整列數與底色
+- 保留 Simops / Remarks
+
+</details>
